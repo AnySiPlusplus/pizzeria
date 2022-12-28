@@ -1,0 +1,14 @@
+en:
+  fast_autentificates:
+    show:
+      new_customer: 'New Customer'
+      or: 'or'
+      quik_register: 'Quik Register'
+      change_password: "You’ll be able to create password later"
+      continue: 'Continue to Checkout'
+      enter_email: 'Enter email'
+    form_with_password:
+      enter_email: 'Enter email'
+      password: 'Password'
+      forgot: 'Forgot passowrd?'
+      log_in: 'Log In with Password'

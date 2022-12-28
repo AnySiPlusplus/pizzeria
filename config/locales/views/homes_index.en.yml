@@ -1,0 +1,15 @@
+en:
+  homes:
+    index:
+      book_name: Real-Life Responsive Web Design
+      description: Smart front-end techniques and design patterns derived from real-life responsive projects
+      authors: Vitaly Friedman, Daniel Mall,Vitaly Friedman
+      btn_buy_now: Buy Now
+      previous: Previous
+      next: Next
+      welcome: Welcome to our amazing Pizzeria!
+      favorite: We pore through hundreds of new pizza each month and select the five best we can find to share with our members
+      started: Get Started
+      best_sellers: Best Sellers
+    newest_books:
+      by_now: 'By now'

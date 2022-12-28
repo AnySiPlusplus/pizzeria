@@ -1,0 +1,15 @@
+en:
+  users:
+    settings:
+      privacy:
+        email: 'Email'
+        enter_email: 'Enter your email'
+        button_save: 'Save'
+        password: 'Password'
+        old_password: 'Old assword'
+        new_password: 'New password'
+        confirm_password: 'Confirm password'
+        remove_account: 'Remove Account'
+        you_sure: 'Are you sure?'
+        please_remove: 'Please Remove My Account'
+        disclaimer: 'I understand that all data will be lost'

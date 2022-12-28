@@ -1,0 +1,19 @@
+en:
+  errors:
+    warning:
+      page_not_found: 'This page not found'
+    alert:
+      invalid_data: 'invalid review data'
+      wrong_coupon: 'Coupon already added or invalid'
+      wrong_book_quantity: 'Wrong book quantity'
+      need_choose: 'You need choose delivery method'
+      wrong_address_data: 'Wrong address data'
+  notice:
+    address_saved: "%{type} Address Saved"
+    thank_for_review: 'Thank for review'
+    book_update: 'Book update in the basket'
+    book_added_to_cart: 'Book added to card'
+    coupon_added: 'Coupon added'
+    delivery_selected: 'Delivery selected'
+    card_added: 'Card added'
+    use_billing: 'Use billing address success!'

@@ -1,0 +1,9 @@
+en:
+  layouts:
+    footer:
+      home: Home
+      menu: Menu
+      settings: Settings
+
+      some_email: support@pizzeria.com
+      some_number: (555)-555-5555

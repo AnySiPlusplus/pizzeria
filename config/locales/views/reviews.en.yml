@@ -1,0 +1,9 @@
+en:
+  review:
+    button:
+      approve: 'approve'
+      reject: 'reject'
+    status:
+      unprocessed: 'unprocessed'
+      approved: 'approved'
+      rejected: 'rejected'

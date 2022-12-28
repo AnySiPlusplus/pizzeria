@@ -1,0 +1,18 @@
+en:
+  carts:
+    show:
+      cart: 'Cart'
+      product: 'Product'
+      price: 'Price'
+      quantity: 'Quantity'
+      subtotal: 'SubTotal'
+      order_summary: 'Order Summary'
+      subtotal_double_dot: 'Subtotal:'
+      coupon: 'Coupon:'
+      apply_coupon: 'Apply Coupon'
+      order_total: 'Order Total:'
+      checkout: 'Checkout'
+    order_items_mobile:
+      price: 'Price'
+      quantity: 'Quantity'
+      subtotal: 'SubTotal'

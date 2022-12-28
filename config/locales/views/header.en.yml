@@ -1,0 +1,17 @@
+en:
+  layouts:
+    header_guess_user:
+      pizzeria: Pizzeria
+      home: 'Home'
+      menu: Menu
+      log_out: Log out
+      log_in: Log In
+      sign_up: 'Sign Up'
+      catalog: Catalog
+    header_authorized_user:
+      pizzeria: Pizzeria      
+      home: 'Home'
+      menu: Menu
+      log_out: Log out
+      log_in: Log In
+      catalog: Catalog

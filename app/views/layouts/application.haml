@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Pizzeria
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    %link{href: "https://fonts.googleapis.com/css?family=Open+Sans", rel: "stylesheet"}
+    %script{src: "https://use.fontawesome.com/67602d7308.js"}
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application", defer: true
+  %body
+    = render 'layouts/header_guess_user'
+    = render 'layouts/flesh'
+    = yield
+    = render 'layouts/footer'

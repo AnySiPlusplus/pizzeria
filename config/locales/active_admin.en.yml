@@ -1,0 +1,10 @@
+en:
+  active_admin:
+    resource:
+      show:
+        book_title: 'Book Title'
+        quantity: 'Quantity'
+        price: 'Price'
+        products: 'Products for this order'
+      edit:
+        order_items: 'Order items'

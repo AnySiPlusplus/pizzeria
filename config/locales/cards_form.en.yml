@@ -1,0 +1,6 @@
+en:
+  card_form:
+    errors:
+      wrong_number: 'Must be only numbers'
+      wrong_name: 'Consist of a-z, A-Z, no special symbols, Can contain spaces'
+      wrong_validity: 'Has a month on the left of a slash /, the year on the right. Month value can be from 01 to 12'

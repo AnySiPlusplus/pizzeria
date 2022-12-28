@@ -1,0 +1,14 @@
+en:
+  errors:
+    addresses:
+      invalid:
+        fields: "must consist of only a-z and A-Z characters without special symbols"
+        address: "Consist of a-z, A-Z, 0-9,’,’, ‘-’, ‘ ’ only, no special symbols"
+        zip: "Consist of 0-9 only,’-’ no special symbols"
+        phone: "Plus (+) at the beginning, After should contain country code of chosen country in Country drop down list Consist of 0-9 only no special symbols example: +1352-2##-####"
+    users:
+      invalid:
+        password: 'Minimum 8 letters, at least 1 uppercase, at least 1 lowercase, at least 1 number.
+                        Mustn’t contain spaces inside'
+        email: "The localpart can consist of labels separated by dots but it cannot have two successive dots, nor can it start or end with a dot.
+                        Labels consist of a-z, A-Z, 0-9 Labels must be less than 63 characters Labels must not start with a hyphen, end with a hyphen, or contain two successive hyphens."

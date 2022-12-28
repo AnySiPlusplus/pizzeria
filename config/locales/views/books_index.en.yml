@@ -1,0 +1,19 @@
+en:
+  books:
+    index:
+      catalog: 'Catalog'
+      filter: 'Filter by category'
+      sort_by: 'Sort by'
+    order_dropdown:
+      title_asc: 'Title: A - Z'
+      title_desc: 'Title: Z - A'
+      newest: 'Newest first'
+      most_popular: 'Popular first'
+      price_asc: 'Price: Low to hight'
+      price_desc: 'Price: Hight to low'
+    view_more:
+      view_more: "View more"
+    categories_bar:
+      all: 'All'
+    category_sort_dropdown:
+      all: 'All'

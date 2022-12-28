@@ -1,0 +1,35 @@
+en:
+  orders:
+    orders:
+      order: 'R%{number}'
+    index:
+      my_orders: 'My orders'
+      sort_by: 'Sort by'
+      number: 'Number'
+      completed_at: 'Completed at'
+      status: 'Status'
+      total: 'Total'
+    show:
+      order: 'R%{number}'
+      back_to_orders: 'Back to orders'
+      shipping_address: 'Shipping Address'
+      billing_address: 'Billing Address'
+      delivery: 'Shipments'
+      payment_info: 'Payment Information'
+      book: 'Book'
+      price: 'Price'
+      quantity: 'Quantity'
+      total: 'Total'
+    dropdown:
+      all_orders: 'All Orders'
+      complete: 'Complete'
+      in_progress: 'In Progress'
+      in_delivery: 'In Delivery'
+      delivered: 'Delivered'
+      canceled: 'Canceled'
+    orders_mobile:
+      order: 'R%{number}'
+      number: 'Number'
+      completed_at: 'Completed at'
+      status: 'Status'
+      total: 'Total'
