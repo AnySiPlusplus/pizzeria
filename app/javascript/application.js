@@ -1,6 +1,4 @@
 import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
 
 import 'bootstrap';
 import './button_read_more';
@@ -14,3 +12,6 @@ import './review_rating_stars';
 import './checkout_form_with_password';
 import './checkout_email_without_password';
 import './checkout_use_billing';
+
+window.jQuery = $;
+window.$ = $;
