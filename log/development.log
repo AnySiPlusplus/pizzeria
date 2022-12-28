@@ -5119,3 +5119,9 @@ Processing by HomesController#index as HTML
 Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 2884)
 
 
+  [1m[35m (128.4ms)[0m  [1m[35mCREATE DATABASE "pizzeria_development" ENCODING = 'unicode'[0m
+  [1m[35m (71.1ms)[0m  [1m[35mCREATE DATABASE "pizzeria_test" ENCODING = 'unicode'[0m
+  [1m[35m (21.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pizzeria_development"[0m
+  [1m[35m (19.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "pizzeria_test"[0m
+  [1m[35m (73.5ms)[0m  [1m[35mCREATE DATABASE "pizzeria_development" ENCODING = 'unicode'[0m
+  [1m[35m (66.9ms)[0m  [1m[35mCREATE DATABASE "pizzeria_test" ENCODING = 'unicode'[0m
