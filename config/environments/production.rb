@@ -36,10 +36,10 @@ Rails.application.configure do
 
   config.active_record.dump_schema_after_migration = false
 
-  ActionMailer::Base.smtp_settings = {
+  # ActionMailer::Base.smtp_settings = {
 
-    user_name: Rails.application.credentials.dig(:smtp, :user_name),
-    password: Rails.application.credentials.dig(:smtp, :password),
-    domain: Rails.application.credentials.dig(:smtp, :domain)
-  }
+  #   user_name: Rails.application.credentials.dig(:smtp, :user_name),
+  #   password: Rails.application.credentials.dig(:smtp, :password),
+  #   domain: Rails.application.credentials.dig(:smtp, :domain)
+  # }
 end

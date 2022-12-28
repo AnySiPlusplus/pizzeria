@@ -10,11 +10,11 @@ jobs:
       - image: cimg/ruby:3.0.3-node
       - image: cimg/postgres:14.0
         environment:
-          POSTGRES_USER: book_store
+          POSTGRES_USER: pizzeria
     environment:
       RAILS_ENV: test
       PGHOST: 127.0.0.1
-      PGUSER: book_store
+      PGUSER: pizzeria
     steps:
       - checkout
       - ruby/install-deps
