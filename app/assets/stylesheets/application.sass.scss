@@ -3,12 +3,6 @@
 @import "custom/theme";
 @import "bookstore/general";
 @import "bookstore/utils/helpers";
-@import 'custom/add_grid_in_class';
-@import 'custom/button_book_shop';
-@import 'custom/button_github';
-@import 'custom/buttons_orderitem';
-@import 'custom/button_log_out';
-@import 'custom/button_destroy_orderItem';
-@import 'custom/button_use_billing';
-@import 'custom/cvv_hint';
-@import 'custom/add_color';
+@import "custom/body_themes";
+@import "custom/header";
+@import "custom/home_index_dark_block";
