@@ -4,7 +4,7 @@ module Pages
       set_url '/'
 
       section :header, 'header' do
-        element :logo, 'a.navbar-brand', text: I18n.t('layouts.header_guess_user.pizzeria')
+        element :logo, '.pizzeria-logo', text: I18n.t('layouts.header_guess_user.pizzeria')
         element :button_home, 'a', text: I18n.t('layouts.header_guess_user.home')
         element :button_menu, 'a', text: I18n.t('layouts.header_guess_user.menu')
         element :button_sign_up, 'a', text: I18n.t('layouts.header_guess_user.sign_up')
