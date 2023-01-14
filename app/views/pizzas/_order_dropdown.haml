@@ -1,0 +1,7 @@
+%a.dropdown-toggle.lead.small{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"}
+  = t(".#{params[:sort_by]}")
+  %i.fa.fa-angle-down.dropdown-icon.pull-right
+%ul.dropdown-menu
+  - Pizzas::PizzasQuery::ORDERS.each do |order|
+    %li
+      %a{href: pizzas_path(@permit_params.merge(sort_by: order.first))}= t(".#{order.first}")

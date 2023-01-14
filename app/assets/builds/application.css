@@ -8008,7 +8008,12 @@ button.close {
 
 .dropdowns .dropdown-toggle {
   width: 100%;
-  border: 1px solid #eeeeee;
+  border: 1px solid black;
+  margin-top: 20px;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
+  border-radius: 30px;
   display: inline-block;
   padding: 10px 15px;
 }
@@ -8018,7 +8023,7 @@ button.close {
 }
 .dropdowns .dropdown-icon {
   font-size: 18px;
-  color: #8c8c8c;
+  color: #0a0a0a;
 }
 .dropdowns .dropdown-menu {
   width: 100%;
@@ -8026,8 +8031,11 @@ button.close {
 
 .dropdown-menu {
   min-width: 210px;
+  background-color: #282b30;
 }
 .dropdown-menu > li > a {
+  background-color: #282b30;
+  color: #8c8c8c;
   font-weight: 300;
   padding: 8px 30px;
   white-space: unset;
@@ -9180,6 +9188,9 @@ img {
   grid-template-columns: 0.5fr 1fr 0.1fr;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
 }
 
 .pizzeria-logo {

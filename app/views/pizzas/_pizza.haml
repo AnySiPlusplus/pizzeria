@@ -1,0 +1,14 @@
+- @pizzas.each do |pizza|
+  .col-xs-6.col-sm-3
+    .general-thumb-wrap
+      .thumbnail.general-thumbnail.dark-theme.dark-block
+        %img.img-shadow.general-thumbnail-img{src: "https://i.postimg.cc/63Gn2tYs/9.png", alt: "design-book"}
+        .thumb-hover
+          .general-thumb-link-wrap
+            %a.thumb-hover-link{href: pizza_path(pizza)}
+              %i.fa.fa-eye.thumb-icon{'aria-hidden': "true"}
+            %a.thumb-hover-link{href: "#"}
+              %i.fa.fa-shopping-cart.thumb-icon
+    .general-thumb-info
+      %p.title= pizza.name
+      %p.font-16.in-gold-500= pizza.price.format

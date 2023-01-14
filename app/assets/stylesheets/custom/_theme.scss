@@ -20,7 +20,12 @@
 .dropdowns {
   .dropdown-toggle {
     width: 100%;
-    border: 1px solid $grey-200;
+    border: 1px solid black;
+    margin-top: 20px;
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #0a0a0a;
+    border-radius: 30px;
     display: inline-block;
     padding: 10px 15px;
     &:hover,
@@ -31,7 +36,7 @@
   }
   .dropdown-icon {
     font-size: 18px;
-    color: $grey-600;
+    color: #0a0a0a;
   }
   .dropdown-menu {
     width: 100%;
@@ -39,7 +44,10 @@
 }
 .dropdown-menu {
   min-width: 210px;
+  background-color: #282b30;
   > li > a {
+    background-color:#282b30;
+    color: $grey-600;
     font-weight: 300;
     padding: 8px 30px;
     white-space: unset;
