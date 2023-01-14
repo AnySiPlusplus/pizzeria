@@ -30,7 +30,7 @@ jobs:
       - run:
           command: bundle exec rails db:migrate
       - run:
-          comand: yarn add @popperjs/core
+          command: yarn add @popperjs/core
       - run:
           command: bundle exec rails assets:precompile
       - ruby/rspec-test
