@@ -1,38 +1,14 @@
-%header.navbar.navbar-default
-  .container
-    .navbar-header
-      %button.navbar-toggle.pull-left{type: "button", 'data-toggle': "collapse", 'data-target': "#navbar"}
-        %span.sr-only
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{href: home_path}= t('.pizzeria')
-      %a.shop-link.pull-right.visible-xs{href: '#'}
+%header
+  .conteiner
+    .custom-header
+      .pizzeria-logo
+        %a{href: home_path}= t('.pizzeria')
+      .buttons-set-header
+        .buttons-header.pull-right
+          %a.margin-4{href: home_path }= t('.home')
+          %a.margin-4{href: pizzas_path}= t('.menu')
+          %a.margin-4{href: '#'}= t('.log_in')
+          %a.margin-4{href: '#'}= t('.sign_up')
+      %a.shop-link.pull-right.hidden-xs{href: "#"}
         %span.shop-icon
-          %span.shop-quantity 3
-    %a.shop-link.pull-right.hidden-xs{href: "#"}
-      %span.shop-icon
-        %span.shop-quantity 3
-    #navbar.navbar-collapse.collapse.pl-30{'aria-expanded': "false"}
-      .visible-xs
-        %button.close{type: "button", 'aria-label': "Close"}
-          %span{'aria-hidden': "true"} &times;
-        %ul.nav.navbar-nav
-          %li
-            %a{href: home_path}= t('.home')
-          %li
-            %a{href: '#'}= t('.pizzeria')
-          %li
-            %a{href: '#'}= t('.log_in')
-          %li
-            %a{href: '#'}= t('.sign_up')
-      .hidden-xs
-        %ul.nav.navbar-nav
-          %li
-            %a{href: home_path }= t('.home')
-          %li
-            %a{href: '#'}= t('.menu')
-          %li
-            %a{href: '#'}= t('.log_in')
-          %li
-            %a{href: '#'}= t('.sign_up')
+          %span.shop-quantity 0

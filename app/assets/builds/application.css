@@ -8008,7 +8008,12 @@ button.close {
 
 .dropdowns .dropdown-toggle {
   width: 100%;
-  border: 1px solid #eeeeee;
+  border: 1px solid black;
+  margin-top: 20px;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
+  border-radius: 30px;
   display: inline-block;
   padding: 10px 15px;
 }
@@ -8018,7 +8023,7 @@ button.close {
 }
 .dropdowns .dropdown-icon {
   font-size: 18px;
-  color: #8c8c8c;
+  color: #0a0a0a;
 }
 .dropdowns .dropdown-menu {
   width: 100%;
@@ -8026,8 +8031,11 @@ button.close {
 
 .dropdown-menu {
   min-width: 210px;
+  background-color: #282b30;
 }
 .dropdown-menu > li > a {
+  background-color: #282b30;
+  color: #8c8c8c;
   font-weight: 300;
   padding: 8px 30px;
   white-space: unset;
@@ -8113,6 +8121,7 @@ button.close {
 }
 
 .thumbnail {
+  border: #0a0a0a;
   position: relative;
   margin-right: auto;
   margin-left: auto;
@@ -8191,7 +8200,11 @@ button.close {
 }
 
 .thumb-hover {
-  background-color: #c59c71;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
+  border-radius: 30px;
+  background-color: #282b30;
   text-align: center;
   position: absolute;
   top: 0;
@@ -9164,58 +9177,65 @@ img {
   margin-bottom: 120px !important;
 }
 
-.general-thumb-link-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.book-icon-shop {
-  background-color: #c59c71;
-}
-
-.button_github {
-  border: none;
-  background-color: white;
-}
-
-.output_button {
-  display: grid;
-  margin: auto;
-  grid-template-columns: 0.5fr 1fr 0.5fr;
-}
-
-.button_log_out {
-  border: none;
-  margin-left: 20px;
-  background-color: white;
-}
-
-.d-none {
-  border: none;
-  margin-top: 5px;
-}
-
-.use_billing_button {
-  margin-top: 20px;
-}
-
-.cvv-hint:hover .cvv-message {
-  visibility: visible;
-}
-
-.cvv-hint .cvv-message {
-  visibility: hidden;
-  border: 1px solid black;
-  background-color: #F6F6F6;
-  border-radius: 6px;
-  width: 300px;
-  color: black;
-  text-align: center;
-  padding-top: 5px;
-  position: absolute;
-  top: 100%;
-}
-
 .dark-theme {
-  background-color: #36393e;
+  color: aliceblue;
+  background-color: #282b30;
+}
+
+.custom-header {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.1fr;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
+}
+
+.pizzeria-logo {
+  padding-top: 25px;
+  padding-left: 60px;
+}
+
+.buttons-set-header {
+  padding: 15px;
+  top: 20px;
+  text-align: center;
+}
+
+.buttons-header {
+  margin-right: 60px;
+  padding-right: 60px;
+  padding-top: 20px;
+}
+
+.margin-4 {
+  margin: 4px;
+}
+
+.slider-block {
+  margin-top: 20px;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
+  border-radius: 30px;
+}
+
+.dark-block {
+  margin-top: 20px;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
+  border-radius: 30px;
+}
+
+.get-started-block {
+  padding-top: 10px;
+  height: 200px;
+  margin-top: 20px;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
+  border-radius: 30px;
 }

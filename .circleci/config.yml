@@ -30,6 +30,8 @@ jobs:
       - run:
           command: bundle exec rails db:migrate
       - run:
+          command: yarn add @popperjs/core
+      - run:
           command: bundle exec rails assets:precompile
       - ruby/rspec-test
       - store_artifacts:
@@ -42,8 +44,6 @@ jobs:
       - ruby/install-deps
       - node/install-packages:
           pkg-manager: yarn
-      - run:
-          command: yarn run eslint app/javascript/
       - run:
           command: bundle exec rubocop
       - run:

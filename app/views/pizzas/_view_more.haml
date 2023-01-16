@@ -1,0 +1,2 @@
+- unless @pagy.pages.eql?(1)
+  %button.btn.btn-primary#view_more{data: {page: @pagy.next, pages: @pagy.pages} }= t('.view_more')

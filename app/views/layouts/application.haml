@@ -11,7 +11,8 @@
     = stylesheet_link_tag "application"
     = javascript_include_tag "application", defer: true
   %body
-    = render 'layouts/header_guess_user'
-    = render 'layouts/flesh'
-    = yield
-    = render 'layouts/footer'
+    .dark-theme
+      = render 'layouts/header_guess_user'
+      = render 'layouts/flesh'
+      = yield
+      = render 'layouts/footer'
