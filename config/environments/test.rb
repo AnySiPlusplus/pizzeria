@@ -14,9 +14,9 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :test
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-  # OmniAuth.config.test_mode = true
-  # OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(provider: 'github', uid: '123545',
-  #                                                             info: { email: FFaker::Internet.email })
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(provider: 'github', uid: '123545',
+                                                              info: { email: FFaker::Internet.email })
 
   config.public_file_server.enabled = true
   config.public_file_server.headers = {
