@@ -1,4 +1,4 @@
-RSpec.describe 'Sign in', type: :feature, js: true do
+RSpec.describe 'Sign in', type: :feature do
   let(:page) { Pages::SignIn::Create.new }
   let(:user) { create(:user) }
 
