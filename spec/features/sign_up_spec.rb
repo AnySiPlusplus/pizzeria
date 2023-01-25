@@ -1,6 +1,6 @@
 RSpec.describe 'Sign up', type: :feature do
   let(:page) { Pages::SignUp::Create.new }
-  
+
   context 'when valid data' do
     before do
       page.load
