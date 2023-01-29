@@ -1,0 +1,16 @@
+%main.container.general-main-wrap
+  .text-center 
+    %h3.general-login-title= t('.sign_up')
+    = button_to '', user_github_omniauth_authorize_path, class: 'general-login-icon fa fa-github button_github'
+    = button_to '',  user_facebook_omniauth_authorize_path, class: 'general-login-icon fa fa-facebook'
+    %p.general-login-text= t('.or')
+  .general-form
+    = simple_form_for(resource, as: resource_name, url: user_registration_path, wrapper: :default) do |form|
+      = form.input :email, label: t('.enter_email'), placeholder: t('.enter_email')
+      = form.input :password, label: t('.password'), placeholder: t('.password')
+      = form.input :password_confirmation, label: t('.confirm'), placeholder: t('.confirm')
+      .text-center
+        = form.button :submit, t('.sign_up'), class: 'btn btn-default mb-20 registrate'
+%p.general-sign-text.text-center
+  = t('.have_account')
+  %a.in-gold-500{href: new_user_session_path }= t('.log_in')

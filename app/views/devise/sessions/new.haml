@@ -1,0 +1,24 @@
+%main.container.general-main-wrap
+  .text-center
+    %h3.general-login-title= t('.log_in')
+    = button_to '', user_github_omniauth_authorize_path, class: 'general-login-icon fa fa-github button_github'
+    = button_to '',  user_facebook_omniauth_authorize_path, class: 'general-login-icon fa fa-facebook'
+    %p.general-login-text= t('.or')
+  .general-form
+    -if flash.any?
+      - resource.valid?
+    = simple_form_for(resource, as: resource_name, url: user_session_path, wrapper: :default) do |form|
+      = form.input :email, label: t('.enter_email'), placeholder: t('.enter_email')
+      = form.input :password, label: t('.password'), placeholder: t('.password')
+      = link_to t('.forgot'), new_password_path(resource_name), class: 'help-block in-gold-500'
+      .form-group.checkbox.text-center.mb-30
+        %label.checkbox-label
+          = form.check_box :remember_me, class: 'checkbox-input', hidden: true
+          %span.checkbox-icon
+            %i.fa.fa-check
+          %span.checkbox-text= t('.remember')
+      .text-center
+        = form.button :submit, t('.log_in'), class: 'btn btn-default mb-20 log_in'
+%p.general-sign-text.text-center
+  = t('.dont_have_account')
+  %a.in-gold-500{href: new_registration_path(resource_name)}= t('.sign_up')

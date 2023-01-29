@@ -8,6 +8,17 @@
           null
         ]
       },
+      "/home/siplusplus/done_pj/website_pizzeria/app/helpers/error_messages_helper.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/home/siplusplus/done_pj/website_pizzeria/app/controllers/homes_controller.rb": {
         "lines": [
           1,
@@ -118,8 +129,88 @@
           1,
           null
         ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/controllers/users/omniauth_callbacks_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/controllers/users/registrations_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          6,
+          6,
+          6,
+          null,
+          3,
+          3,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/forms/users/sign_up_form.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/forms/base_form.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1673701484
+    "timestamp": 1674644303
   }
 }

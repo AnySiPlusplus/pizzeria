@@ -12,7 +12,7 @@
     = javascript_include_tag "application", defer: true
   %body
     .dark-theme
-      = render 'layouts/header_guess_user'
+      = render( user_signed_in? ? "layouts/header_authentificate_user" : "layouts/header_guess_user" )
       = render 'layouts/flesh'
       = yield
       = render 'layouts/footer'
