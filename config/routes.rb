@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   root 'homes#index', as: 'home'
 
   resources :pizzas, only: %I[show index]
+
+  resource :address, only: %i[edit update]
+  resource :user_photo, only: %i[edit update destroy create]
 end

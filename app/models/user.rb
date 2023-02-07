@@ -5,6 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable, :omniauthable, omniauth_providers: %i[github facebook]
 
+  has_one :billing, dependent: :destroy
+  has_one :shipping, dependent: :destroy
+  has_one :picture, dependent: :destroy
+
   def self.from_omniauth(access_token)
     email = access_token.info['email'].downcase
     user = User.find_by(email: email)

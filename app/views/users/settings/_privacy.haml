@@ -1,0 +1,24 @@
+#privacy{role: "tabpanel"}
+  .row.mb-60
+    .col-sm-5#email_form_wrapper
+      %p.in-gold-500.font-18.mb-25= t('.email')
+      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), method: :patch, wrapper: :default) do |f|
+        = f.input :email, placeholder: t('.enter_email')
+        = f.button :submit, t('.button_save'), class: 'btn btn-default mb-35', id: 'change_email', disabled: true
+    .col-sm-5.col-sm-offset-1#new_password_form_wrapper
+      %p.in-gold-500.font-18.mb-25= t('.password')
+      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name),  method: :patch, wrapper: :password ) do |f|
+        = f.input :current_password, placeholder: t('.old_password')
+        = f.input :password, placeholder: t('.new_password')
+        = f.input :password_confirmation, placeholder: t('.confirm_password')
+        = f.button :submit, t('.button_save'), class: 'mb-10 btn-default', id: 'change_password', disabled: true
+    .col-sm-12
+      %p.in-gold-500.font-18.mb-25= t('.remove_account')
+      .general-settings-btn
+        = button_to t('.please_remove'), registration_path(resource_name), data: { confirm: t('.you_sure') }, method: :delete, class: 'btn mb-20 btn-default', id: 'btn_delete', disabled: true
+      .form-group.checkbox.general-settings-checkbox
+        %label.checkbox-label
+          %input.checkbox-input#accept{type: "checkbox", hidden: true, value: 1}
+          %span.checkbox-icon
+            %i.fa.fa-check
+          %span.checkbox-text= t('.disclaimer')
