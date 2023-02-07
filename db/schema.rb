@@ -10,14 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_16_130931) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_01_102829) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.string "first_name", limit: 50, null: false
+    t.string "last_name", limit: 50, null: false
+    t.string "address", limit: 50, null: false
+    t.string "city", limit: 50, null: false
+    t.string "country", limit: 50, null: false
+    t.string "phone", limit: 15, null: false
+    t.bigint "user_id", null: false
+    t.string "type", limit: 50, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_addresses_on_user_id"
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name", limit: 50, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.text "image_data"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_pictures_on_user_id"
   end
 
   create_table "pizza_dimensions", force: :cascade do |t|
@@ -58,6 +80,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_16_130931) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addresses", "users"
+  add_foreign_key "pictures", "users"
   add_foreign_key "pizzas", "categories"
   add_foreign_key "pizzas", "pizza_dimensions"
 end

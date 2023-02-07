@@ -1,0 +1,11 @@
+= simple_form_for address_form, as: "#{address_form(address_form)}".to_sym, url: address_path, method: :put, wrapper: :profile do |f|
+  = f.hidden_field :type
+  = f.input :first_name, placeholder: t('.first_name')
+  = f.input :last_name, placeholder: t('.last_name')
+  = f.input :address, placeholder: t('.address')
+  = f.input :city, placeholder: t('.city')
+  %label.control-label.input-label{for: "сountry"}= t('.country')
+  = f.country_select :country, {}, class: 'form-control mb-10'
+  = f.input :phone, placeholder: t('.phone_example')
+  .text-center.general-text-align
+    = f.button :submit , t('.button_save'), class: 'btn-default', id: "button_#{address_form(address_form)}", disabled: true

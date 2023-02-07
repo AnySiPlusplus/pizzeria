@@ -1,6 +1,15 @@
 {
   "RSpec": {
     "coverage": {
+      "/home/siplusplus/done_pj/website_pizzeria/app/helpers/addresses_helper.rb": {
+        "lines": [
+          1,
+          1,
+          24,
+          null,
+          null
+        ]
+      },
       "/home/siplusplus/done_pj/website_pizzeria/app/helpers/application_helper.rb": {
         "lines": [
           1,
@@ -19,14 +28,40 @@
           null
         ]
       },
-      "/home/siplusplus/done_pj/website_pizzeria/app/controllers/homes_controller.rb": {
+      "/home/siplusplus/done_pj/website_pizzeria/app/controllers/addresses_controller.rb": {
+        "lines": [
+          1,
+          1,
+          10,
+          10,
+          null,
+          null,
+          1,
+          6,
+          6,
+          null,
+          null,
+          1,
+          null,
+          1,
+          10,
+          10,
+          null,
+          null,
+          1,
+          31,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/home/siplusplus/done_pj/website_pizzeria/app/controllers/application_controller.rb": {
+      "/home/siplusplus/done_pj/website_pizzeria/app/controllers/homes_controller.rb": {
         "lines": [
           1,
           1,
@@ -56,6 +91,67 @@
           null,
           1,
           23,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/controllers/user_photos_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/uploaders/image_uploader.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
           null,
           null
         ]
@@ -111,6 +207,92 @@
           null
         ]
       },
+      "/home/siplusplus/done_pj/website_pizzeria/app/interactors/addresses/address_update.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          10,
+          10,
+          null,
+          null,
+          1,
+          null,
+          1,
+          6,
+          5,
+          null,
+          null,
+          1,
+          10,
+          10,
+          null,
+          null,
+          1,
+          11,
+          null,
+          null,
+          1,
+          22,
+          22,
+          null,
+          null,
+          null,
+          1,
+          10,
+          null,
+          null,
+          1,
+          10,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/interactors/base_interactor.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/forms/addresses/address_form.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/forms/base_form.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
       "/home/siplusplus/done_pj/website_pizzeria/app/decorators/pizza_decorator.rb": {
         "lines": [
           1,
@@ -127,6 +309,52 @@
         "lines": [
           1,
           1,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/interactors/user_photos/update.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/forms/users/user_photo_form.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/interactors/user_photos/destroy.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -177,6 +405,12 @@
           3,
           null,
           null,
+          1,
+          6,
+          6,
+          6,
+          null,
+          null,
           null
         ]
       },
@@ -203,14 +437,85 @@
           null
         ]
       },
-      "/home/siplusplus/done_pj/website_pizzeria/app/forms/base_form.rb": {
+      "/home/siplusplus/done_pj/website_pizzeria/app/interactors/privacy/privacy_update.rb": {
         "lines": [
           1,
           1,
+          1,
+          6,
+          null,
+          6,
+          null,
+          4,
+          null,
+          null,
+          1,
+          null,
+          1,
+          10,
+          null,
+          null,
+          1,
+          6,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/forms/users/privacy_email.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/forms/users/privacy_password.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          3,
+          null,
+          1,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1674644303
+    "timestamp": 1675764392
   }
 }
