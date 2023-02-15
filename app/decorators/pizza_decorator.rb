@@ -5,4 +5,8 @@ class PizzaDecorator < ApplicationDecorator
   def short_description
     object.description.truncate(SHORT_DESCRIPTION)
   end
+
+  def pizza_dimension
+    object.pizza_dimension.dimension
+  end
 end

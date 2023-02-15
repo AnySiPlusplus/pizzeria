@@ -29,8 +29,4 @@ class ImageUploader < Shrine
     validate_mime_type TYPE
     validate_extension EXTENSION
   end
-
-  Attacher.default_url do |derivative: nil, **|
-    "#{derivative}.png" if derivative
-  end
 end
