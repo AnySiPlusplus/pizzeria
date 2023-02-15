@@ -3,4 +3,6 @@ class Pizza < ApplicationRecord
 
   belongs_to :category
   belongs_to :pizza_dimension
+
+  validates :name, presence: true
 end

@@ -1,12 +1,10 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/siplusplus/done_pj/website_pizzeria/app/helpers/addresses_helper.rb": {
+      "/home/siplusplus/done_pj/website_pizzeria/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
-          24,
-          null,
           null
         ]
       },
@@ -17,6 +15,15 @@
           null
         ]
       },
+      "/home/siplusplus/done_pj/website_pizzeria/app/helpers/addresses_helper.rb": {
+        "lines": [
+          1,
+          1,
+          24,
+          null,
+          null
+        ]
+      },
       "/home/siplusplus/done_pj/website_pizzeria/app/helpers/error_messages_helper.rb": {
         "lines": [
           1,
@@ -24,6 +31,252 @@
           1,
           null,
           null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/admin/admin_users.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          6,
+          6,
+          null,
+          6,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null,
+          1,
+          4,
+          4,
+          4,
+          4,
+          null,
+          4,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/admin/categories.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          5,
+          5,
+          null,
+          5,
+          null,
+          null,
+          1,
+          5,
+          5,
+          null,
+          null,
+          null,
+          1,
+          7,
+          7,
+          null,
+          7,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/admin/dashboard.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          86,
+          null,
+          3,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/admin/pizza_dimensions.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          5,
+          5,
+          5,
+          null,
+          5,
+          null,
+          null,
+          1,
+          5,
+          5,
+          5,
+          null,
+          null,
+          null,
+          1,
+          7,
+          7,
+          7,
+          null,
+          7,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/decorators/pizza_dimension_decorator.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          23,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/decorators/application_decorator.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          21,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/admin/pizzas.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          36,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          null,
+          7,
+          null,
+          null,
+          1,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          null,
+          null,
+          null,
+          1,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          null,
+          11,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/decorators/pizza_decorator.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          8,
+          null,
+          null,
+          1,
+          16,
+          null,
+          null
+        ]
+      },
+      "/home/siplusplus/done_pj/website_pizzeria/app/admin/users.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          6,
+          null,
+          6,
+          6,
+          null,
+          null,
+          6,
+          6,
+          null,
+          6,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
           null,
           null
         ]
@@ -51,13 +304,6 @@
           1,
           31,
           null,
-          null
-        ]
-      },
-      "/home/siplusplus/done_pj/website_pizzeria/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
           null
         ]
       },
@@ -148,10 +394,6 @@
           1,
           1,
           1,
-          null,
-          null,
-          1,
-          0,
           null,
           null
         ]
@@ -287,25 +529,6 @@
         ]
       },
       "/home/siplusplus/done_pj/website_pizzeria/app/forms/base_form.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/siplusplus/done_pj/website_pizzeria/app/decorators/pizza_decorator.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/siplusplus/done_pj/website_pizzeria/app/decorators/application_decorator.rb": {
         "lines": [
           1,
           1,
@@ -516,6 +739,6 @@
         ]
       }
     },
-    "timestamp": 1675764392
+    "timestamp": 1676457836
   }
 }

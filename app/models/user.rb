@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_one :shipping, dependent: :destroy
   has_one :picture, dependent: :destroy
 
+  accepts_nested_attributes_for :picture, allow_destroy: true
+
   def self.from_omniauth(access_token)
     email = access_token.info['email'].downcase
     user = User.find_by(email: email)
