@@ -13,6 +13,8 @@ class PizzasController < ApplicationController
   def show
     @pizza = Pizza.find(params[:id]).decorate
     @dimensions = PizzaDimension.all
+    @review_form = @pizza.reviews.build if user_signed_in?
+    @reviews = Review.where(pizza_id: @pizza.id, status: :approved).decorate
   end
 
   private

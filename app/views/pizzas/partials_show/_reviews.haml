@@ -1,0 +1,17 @@
+%h3.in-gold-500.mb-25=  t('.reviews_count', count: @reviews.count)
+- @reviews.each do |review|
+  .general-message-wrap.divider-lg
+    .clearfix
+      %span.img-circle.logo-size.logo-empty.media-object= review.user.picture ? image_tag(review.user.picture.image_url(:tiny)) : review.user_avatar
+      .ml-70
+        %div
+          .general-message-date.hidden-xs= review.review_create_at
+          .max-240
+            .general-message-verified.pull-right= t('.vefifaed_reviewer')
+            .general-message-name= review.user_name
+        .mb-15
+          - review.rating.times do 
+            %i.fa.fa-star.rate-star
+          - (Reviews::ReviewForm::MAX_STARS - review.rating).times do 
+            %i.fa.fa-star.rate-empty
+        %p= review.review_text
