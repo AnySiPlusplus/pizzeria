@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_one :shipping, dependent: :destroy
   has_one :picture, dependent: :destroy
 
+  has_many :reviews, dependent: :destroy
+
   accepts_nested_attributes_for :picture, allow_destroy: true
 
   def self.from_omniauth(access_token)

@@ -8,6 +8,7 @@ import './calculator';
 import './change_email';
 import './change_password';
 import './delete_account_button';
+import './review_rating_stars';
 
 window.jQuery = $;
 window.$ = $;

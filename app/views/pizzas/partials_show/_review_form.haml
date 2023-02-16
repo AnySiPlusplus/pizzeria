@@ -1,0 +1,15 @@
+%h3= t('.write_review')
+= simple_form_for(@review_form, url: pizza_reviews_path(@pizza), method: :post, wrapper: :profile) do |f|
+  %p.general-info-text= t('.scope')
+  .mb-15#my_rating
+    - (Reviews::ReviewForm::ONE_STAR..Reviews::ReviewForm::MAX_STARS).each do |index|
+      %i.fa.fa-star.rate-empty{ value: index , id: "star_#{index}", onclick: "getStars(#{index});" }
+  .row  
+    .col-md-8
+      .mb-40
+        = f.hidden_field :pizza_id, value: @pizza.id
+        = f.hidden_field :rating
+        = f.input :title
+        = f.input :review_text
+        .text-right
+          = f.button :submit, t('.post'), class: 'btn btn-default mb-20', disabled: false

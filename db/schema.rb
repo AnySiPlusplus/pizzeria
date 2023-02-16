@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_08_105630) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_15_152734) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -90,6 +90,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_08_105630) do
     t.index ["pizza_dimension_id"], name: "index_pizzas_on_pizza_dimension_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.string "title", limit: 80, null: false
+    t.text "review_text", null: false
+    t.integer "rating", default: 0
+    t.integer "status"
+    t.bigint "pizza_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pizza_id"], name: "index_reviews_on_pizza_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -110,4 +123,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_08_105630) do
   add_foreign_key "pictures", "users"
   add_foreign_key "pizzas", "categories"
   add_foreign_key "pizzas", "pizza_dimensions"
+  add_foreign_key "reviews", "pizzas"
+  add_foreign_key "reviews", "users"
 end
