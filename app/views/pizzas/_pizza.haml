@@ -2,7 +2,7 @@
   .col-xs-6.col-sm-3
     .general-thumb-wrap
       .thumbnail.general-thumbnail.dark-theme.dark-block
-        %img.img-shadow.general-thumbnail-img{src: "https://i.postimg.cc/63Gn2tYs/9.png", alt: "design-book"}
+        = image_tag(pizza.first_image(:medium), class: 'img-shadow general-thumbnail-img')
         .thumb-hover
           .general-thumb-link-wrap
             %a.thumb-hover-link{href: pizza_path(pizza)}

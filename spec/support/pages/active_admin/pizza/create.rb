@@ -8,6 +8,7 @@ module Pages
           element :button, '#pizza_submit_action'
           element :category_select, '#pizza_category_id'
           element :pizza_dimension_select, '#pizza_pizza_dimension_id'
+          element :add_picture, '.button.has_many_add'
         end
 
         element :admin_wrong_message, '.inline-errors'
@@ -29,6 +30,11 @@ module Pages
         def choose_pizza_dimension(pizza_dimension)
           form.pizza_dimension_select.click
           find(:option, text: pizza_dimension.dimension).click
+        end
+
+        def add_picture
+          form.add_picture.click
+          attach_file(Rails.root.join('app/assets/images/small.png'))
         end
       end
     end

@@ -2,7 +2,7 @@
 - @reviews.each do |review|
   .general-message-wrap.divider-lg
     .clearfix
-      %span.img-circle.logo-size.logo-empty.media-object= review.user.picture ? image_tag(review.user.picture.image_url(:tiny)) : review.user_avatar
+      %span.img-circle.logo-size.logo-empty.media-object= review.user.user_picture ? image_tag(review.user.user_picture.image_url(:tiny)) : review.user_avatar
       .ml-70
         %div
           .general-message-date.hidden-xs= review.review_create_at

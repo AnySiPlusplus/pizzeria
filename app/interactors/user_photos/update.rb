@@ -7,7 +7,7 @@ module UserPhotos
     private
 
     def current_form
-      @current_form ||= Users::UserPhotoForm.new(context.current_user.build_picture)
+      @current_form ||= Users::UserPhotoForm.new(context.current_user.build_user_picture)
     end
 
     def permit_params

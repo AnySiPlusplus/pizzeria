@@ -1,7 +1,5 @@
 class Picture < ApplicationRecord
-  include ImageUploader::Attachment(:image)
-
-  belongs_to :user
+  belongs_to :picturable, polymorphic: true
 
   validates :image_data, presence: true
 end

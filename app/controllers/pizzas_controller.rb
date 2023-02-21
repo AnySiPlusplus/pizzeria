@@ -3,6 +3,7 @@ class PizzasController < ApplicationController
 
   def index
     @pagy, @pizzas = pagy(::Pizzas::PizzasQuery.new(params).call)
+    @pizzas = @pizzas.includes([:pizza_pictures]).decorate
 
     respond_to do |format|
       format.html

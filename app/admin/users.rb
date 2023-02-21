@@ -1,11 +1,11 @@
 ActiveAdmin.register User do
-  permit_params :email, :password, :password_confirmation, picture_attributes: %i[image _destroy id]
+  permit_params :email, :password, :password_confirmation, user_picture_attributes: %i[image _destroy id]
 
   index do
     selectable_column
 
     column :picture do |user|
-      span image_tag(user&.picture&.image_url(:tiny)) if user.picture
+      span image_tag(user&.user_picture&.image_url(:tiny)) if user.user_picture
     end
 
     id_column
@@ -17,7 +17,7 @@ ActiveAdmin.register User do
   show do
     panel :picture do
       table do
-        span image_tag(user.picture.image_url(:small)) if user.picture
+        span image_tag(user.user_picture.image_url(:small)) if user.user_picture
       end
     end
 
@@ -31,7 +31,7 @@ ActiveAdmin.register User do
       f.input :email
 
       inputs 'Images' do
-        f.has_many :picture, new_record: true, allow_destroy: true do |img|
+        f.has_many :user_picture, new_record: true, allow_destroy: true do |img|
           img.input :image, as: :file
         end
       end

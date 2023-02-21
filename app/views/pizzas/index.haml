@@ -15,35 +15,6 @@
           %a.filter-link{href: pizzas_path(category_id: category.id)}
             = category.name
             %span.badge.general-badge= category.pizzas.count
-  -# .dropdowns.mb-25.visible-xs
-  -#   %p.lead.small.mb-10 Filter by category
-  -#   .dropdown
-  -#     %a.dropdown-toggle.lead.small{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"}
-  -#       Newest first
-  -#       %i.fa.fa-angle-down.dropdown-icon.pull-right
-  -#     %ul.dropdown-menu
-  -#       %li
-  -#         %a{href: "#"} Newest first
-  -#       %li
-  -#         %a{href: "#"} Popular first
-  -#       %li
-  -#         %a{href: "#"} Price: Low to hight
-  -#       %li
-  -#         %a{href: "#"} Price: Hight to low
-  -#   %p.lead.small.mb-10 Sort by
-  -#   .dropdown
-  -#     %a.dropdown-toggle.lead.small{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"}
-  -#       Newest first
-  -#       %i.fa.fa-angle-down.dropdown-icon.pull-right
-  -#     %ul.dropdown-menu
-  -#       %li
-  -#         %a{href: "#"} Newest first
-  -#       %li
-  -#         %a{href: "#"} Popular first
-  -#       %li
-  -#         %a{href: "#"} Price: Low to hight
-  -#       %li
-  -#         %a{href: "#"} Price: Hight to low
   .mb-120
     .row#pizzas_list
       = render "pizzas/pizza"
