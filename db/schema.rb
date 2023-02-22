@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_15_152734) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_16_132746) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -62,10 +62,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_15_152734) do
 
   create_table "pictures", force: :cascade do |t|
     t.text "image_data"
-    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_pictures_on_user_id"
+    t.string "picturable_type"
+    t.bigint "picturable_id"
+    t.index ["picturable_type", "picturable_id"], name: "index_pictures_on_picturable"
   end
 
   create_table "pizza_dimensions", force: :cascade do |t|
@@ -120,7 +121,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_15_152734) do
   end
 
   add_foreign_key "addresses", "users"
-  add_foreign_key "pictures", "users"
   add_foreign_key "pizzas", "categories"
   add_foreign_key "pizzas", "pizza_dimensions"
   add_foreign_key "reviews", "pizzas"

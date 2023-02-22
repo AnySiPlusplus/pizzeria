@@ -8,6 +8,10 @@ module Users
       handle_auth 'Facebook'
     end
 
+    def google_oauth2
+      handle_auth 'Google_oauth2'
+    end
+
     def handle_auth(kind)
       @user = User.from_omniauth(request.env['omniauth.auth'])
       user_persited(kind)

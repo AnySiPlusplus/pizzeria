@@ -8,9 +8,9 @@
     %li.tab-item{role: "presentation"}
       %a.tab-link{href: edit_user_photo_path, 'aria-controls': "privacy" } User photo
   .tab-content
-    - if current_user.picture
-      = image_tag(current_user.picture.image_url(:thumbnail))
-      = button_to 'Destroy Image', user_photo_path, method: :delete 
+    - if current_user.user_picture
+      = image_tag(current_user.user_picture.image_url(:thumbnail))
+      = button_to 'Destroy Image', user_photo_path, method: :delete
     = simple_form_for @picture, url: user_photo_path, method: :put do |f|
       = f.file_field :image, required: true
       = f.submit

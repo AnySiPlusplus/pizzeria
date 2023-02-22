@@ -1,11 +1,12 @@
 ACTION_INDEX = 'index'.freeze
 
 ActiveAdmin.register Pizza do
-  permit_params :name, :price_cents, :price_currency, :filling, :description, :category_id, :pizza_dimension_id
+  permit_params :name, :price_cents, :price_currency, :filling, :description, :category_id, :pizza_dimension_id,
+                pizza_pictures_attributes: %i[image _destroy id]
 
   controller do
     def scoped_collection
-      action_name == ACTION_INDEX ? super.includes(%i[category pizza_dimension]) : super
+      action_name == ACTION_INDEX ? super.includes(%i[category pizza_dimension pizza_pictures]) : super
     end
   end
 
@@ -13,6 +14,14 @@ ActiveAdmin.register Pizza do
 
   index do
     selectable_column
+
+    column :picture do |pizza|
+      first_image = pizza.pizza_pictures.map do |image|
+        image_tag(image.image_url(:thumbnail))
+      end.first
+      span first_image
+    end
+
     column :name
     column :filling
     column :category
@@ -25,6 +34,13 @@ ActiveAdmin.register Pizza do
 
   show do
     attributes_table do
+      panel :pictures do
+        table do
+          pizza.pizza_pictures.each do |image|
+            span image_tag(image.image_url(:small))
+          end
+        end
+      end
       row :name
       row :filling
       row :category
@@ -42,6 +58,12 @@ ActiveAdmin.register Pizza do
       f.input :description
       f.input :pizza_dimension, collection: PizzaDimension.all.decorate
       f.input :price_cents
+
+      inputs 'Images' do
+        f.has_many :pizza_pictures, new_record: true, allow_destroy: true do |img|
+          img.input :image, as: :file
+        end
+      end
 
       f.actions
     end

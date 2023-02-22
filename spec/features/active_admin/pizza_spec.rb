@@ -116,5 +116,20 @@ RSpec.describe 'Pizza', type: :feature do
       it { expect { page.form.button.click }.to(change { Pizza.first.filling }) }
       it { expect { page.form.button.click }.to(change { Pizza.first.description }) }
     end
+
+    context 'when admin add images to pizzas' do
+      let(:params) do
+        attributes_for(:pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension,
+                               filling: 'not repeated pilling')
+      end
+
+      before do
+        page.load(id: pizza.id)
+        page.fill_form(params)
+        page.add_picture
+      end
+
+      it { expect { page.form.button.click }.to(change { Pizza.first.pizza_pictures }) }
+    end
   end
 end

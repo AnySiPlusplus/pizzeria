@@ -1,6 +1,7 @@
 module Users
   class UserPhotoForm < BaseForm
     property :image
-    property :user_id
+    property :picturable_type
+    property :picturable_id
   end
 end
