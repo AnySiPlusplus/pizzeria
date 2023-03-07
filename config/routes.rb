@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resources :reviews, only: :create
   end
 
+  resource :cart, only: %i[show update]
+  resource :order_items, except: :show
+
   resource :address, only: %i[edit update]
   resource :user_photo, only: %i[edit update destroy create]
 end

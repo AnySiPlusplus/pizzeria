@@ -15,10 +15,7 @@
       %h1.mt-res-0 Real-Life Responsive Web Design
       %p.lead.small Vitaly Friedman, Daniel Mall,Vitaly Friedman
       .row
-        .col-xs-12.col-md-4
-          %p.h1.in-gold-500.mt-10= @pizza.price.format
-        .col-xs-7.col-md-5
-          %button.btn.btn-default.pull-right.general-position Add to Cart
+        = render 'pizzas/partials_show/add_to_cart', pizza: @pizza
       .general-info-wrap.divider-lg
         %p Description
         %p.lead.small.line-height-2
@@ -33,7 +30,7 @@
       .general-info-wrap.divider-lg
         .clearfix
           %p.pull-left Filling
-          %p.lead.small.pull-right= @pizza.filling
+          %p.lead.small.pull-right= @pizza.filling_full_names
   - if user_signed_in?
     = render 'pizzas/partials_show/review_form'
   = render 'pizzas/partials_show/reviews'
