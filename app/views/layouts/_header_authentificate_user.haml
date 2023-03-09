@@ -22,6 +22,6 @@
                 %li.divider{role: "separator"}
                   %li
                     = button_to t('.log_out'), destroy_user_session_path, method: :delete, class: 'button_log_out'
-      %a.shop-link.pull-right.hidden-xs{href: "#"}
+      %a.shop-link.pull-right.hidden-xs{href: cart_path}
         %span.shop-icon
-          %span.shop-quantity 0
+          %span.shop-quantity= current_order.order_items.count

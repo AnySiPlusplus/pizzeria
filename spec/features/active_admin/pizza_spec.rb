@@ -14,7 +14,6 @@ RSpec.describe 'Pizza', type: :feature do
 
     context 'when admin located index path' do
       it { expect(page).to have_content(pizza.name) }
-      it { expect(page).to have_content(pizza.filling) }
       it { expect(page).to have_content(pizza.price.format) }
     end
 
@@ -109,18 +108,18 @@ RSpec.describe 'Pizza', type: :feature do
       before do
         page.load(id: pizza.id)
         page.fill_form(attributes_for(:pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension,
-                                              filling: 'not repeated pilling'))
+                                              fillings: 'not repeated filling'))
       end
 
       it { expect { page.form.button.click }.to(change { Pizza.first.name }) }
-      it { expect { page.form.button.click }.to(change { Pizza.first.filling }) }
+      it { expect { page.form.button.click }.to(change { Pizza.first.fillings }) }
       it { expect { page.form.button.click }.to(change { Pizza.first.description }) }
     end
 
     context 'when admin add images to pizzas' do
       let(:params) do
         attributes_for(:pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension,
-                               filling: 'not repeated pilling')
+                               fillings: 'not repeated pilling')
       end
 
       before do

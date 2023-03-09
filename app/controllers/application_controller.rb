@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include Pagy::Backend
+  helper_method :current_order
 
   rescue_from ActiveRecord::RecordNotFound, with: :page_not_found
 
@@ -14,5 +15,15 @@ class ApplicationController < ActionController::Base
 
   def result_message(result)
     result.success? ? flash_message(self.class::MESSAGES[:success]) : flash_message(self.class::MESSAGES[:fail])
+  end
+
+  def current_order
+    @current_order ||= current_session
+  end
+
+  def current_session
+    result = Session::OrderSession.call(id: session[:order_id], current_user: current_user)
+    session[:order_id] = result.id if result.id
+    result.session
   end
 end

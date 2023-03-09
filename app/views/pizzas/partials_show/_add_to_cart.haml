@@ -1,0 +1,6 @@
+= simple_form_for(OrderItem.new,  url: order_items_path(order_id: current_order.id), method: :post) do |f|
+  = f.hidden_field :pizza_id, value: @pizza.id
+  .col-xs-12.col-md-4
+    %p.h1.in-gold-500.mt-10= @pizza.price.format
+  .col-xs-7.col-md-5
+    = f.submit 'add', class: 'btn btn-default pull-right general-position'

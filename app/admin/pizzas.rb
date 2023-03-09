@@ -2,11 +2,11 @@ ACTION_INDEX = 'index'.freeze
 
 ActiveAdmin.register Pizza do
   permit_params :name, :price_cents, :price_currency, :filling, :description, :category_id, :pizza_dimension_id,
-                pizza_pictures_attributes: %i[image _destroy id]
+                pizza_pictures_attributes: %i[image _destroy id], filling_ids: []
 
   controller do
     def scoped_collection
-      action_name == ACTION_INDEX ? super.includes(%i[category pizza_dimension pizza_pictures]) : super
+      action_name == ACTION_INDEX ? super.includes(%i[category pizza_dimension pizza_pictures fillings]) : super
     end
   end
 
@@ -23,7 +23,7 @@ ActiveAdmin.register Pizza do
     end
 
     column :name
-    column :filling
+    column :filling_full_names
     column :category
     column :description, &:short_description
     column :dimension, :pizza_dimension
@@ -42,7 +42,7 @@ ActiveAdmin.register Pizza do
         end
       end
       row :name
-      row :filling
+      row :filling_full_names
       row :category
       row :description
       row :dimension, &:pizza_dimension
@@ -53,7 +53,7 @@ ActiveAdmin.register Pizza do
   form do |f|
     f.inputs do
       f.input :name
-      f.input :filling
+      f.input :fillings, collection: Filling.all.decorate, multiple: true
       f.input :category
       f.input :description
       f.input :pizza_dimension, collection: PizzaDimension.all.decorate

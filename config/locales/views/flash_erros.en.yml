@@ -11,9 +11,8 @@ en:
   notice:
     address_saved: "%{type} Address Saved"
     thank_for_review: 'Thank for review'
-    book_update: 'Book update in the basket'
+    pizza_update: 'Pizza update in the basket'
     book_added_to_cart: 'Book added to card'
-    coupon_added: 'Coupon added'
     delivery_selected: 'Delivery selected'
     card_added: 'Card added'
     use_billing: 'Use billing address success!'
