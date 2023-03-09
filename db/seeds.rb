@@ -19,7 +19,7 @@ dimensions = PIZZA_DIMENSIONS.map do |dimension|
   Factory.new.create(:pizza_dimension, dimension: dimension)
 end
 
-fillings = Factory.new.create_list(:filling, 9)
+fillings = Factory.new.create_list(:filling, 8)
 
 13.times do
   Factory.new.create(:pizza, category: categories.sample, pizza_dimension: dimensions.sample,

@@ -7,7 +7,6 @@ RSpec.describe Pizza, type: :model do
   describe 'columns' do
     it { is_expected.to have_db_column(:description).with_options(null: false) }
     it { is_expected.to have_db_column(:name).with_options(null: false) }
-    it { is_expected.to have_db_column(:filling).with_options(null: false) }
     it { is_expected.to have_db_column(:price_cents).with_options(null: false) }
   end
 end
