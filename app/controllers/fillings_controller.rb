@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+class FillingsController < ApplicationController
+  def show
+    @order_item = OrderItem.find(params[:order_item_id])
+    @fillings = Pizza.find_by(name: @order_item.pizza.name).fillings
+  end
+
+  def update
+    Pizzas::CreateCustomPizza.call(params: params)
+  end
+end

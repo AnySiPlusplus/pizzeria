@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_24_121105) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_15_113959) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -122,9 +122,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_24_121105) do
     t.bigint "pizza_dimension_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "fillings_id"
+    t.string "type"
     t.index ["category_id"], name: "index_pizzas_on_category_id"
-    t.index ["fillings_id"], name: "index_pizzas_on_fillings_id"
     t.index ["pizza_dimension_id"], name: "index_pizzas_on_pizza_dimension_id"
   end
 
@@ -164,7 +163,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_24_121105) do
   add_foreign_key "pizza_fillings", "fillings"
   add_foreign_key "pizza_fillings", "pizzas"
   add_foreign_key "pizzas", "categories"
-  add_foreign_key "pizzas", "fillings", column: "fillings_id"
   add_foreign_key "pizzas", "pizza_dimensions"
   add_foreign_key "reviews", "pizzas"
   add_foreign_key "reviews", "users"

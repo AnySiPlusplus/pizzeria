@@ -6,5 +6,6 @@ FactoryBot.define do
     category { create(:category) }
     pizza_dimension { create(:pizza_dimension) }
     fillings { create_list(:filling, 7).sample(4) }
+    type { :OrdinaryPizza }
   end
 end

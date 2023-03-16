@@ -5,6 +5,7 @@
         = image_tag(order_item.first_image(:small))
     %td
       %p.title= order_item.pizza.name
+      = link_to 'Filling', fillings_path(order_item_id: order_item.id)
     %td
       %span.font-16.in-gold-500= order_item.pizza.format_price
     %td

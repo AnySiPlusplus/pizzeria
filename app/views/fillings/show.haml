@@ -1,0 +1,21 @@
+.fillings
+  .filling-menu.dark-theme.dark-block
+    .pizza-menu
+      .thumbnail.dark-theme.pizza-image
+        %img{src: "https://i.postimg.cc/63Gn2tYs/9.png"}
+      .choose-fillings.dark-theme
+        .fillings-block
+          .filling-title
+            %h1 addition fillings
+          - @fillings.each do |filling|
+            .filling
+              .checkbox
+                %input{ type: 'checkbox', checked: include_filling(@order_item.pizza, filling), class: 'complete', name: 'filling', id: 'filling', data: { filling_id: filling.id, price: filling.price.cents,
+                 order_item_id: @order_item.id, authenticity_token: form_authenticity_token } }
+                %h4= filling.name
+              .price-filling
+                %h4= filling.price.format
+    .subtotal-price
+      %h3 Total price $ 45.00
+    .button-back-to-cart
+      = link_to 'Back to cart', cart_path

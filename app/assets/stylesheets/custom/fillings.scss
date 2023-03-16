@@ -1,0 +1,53 @@
+.fillings {
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.filling-menu {
+  height: 75vh;
+  width: 180vh;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.choose-fillings {
+  height: 50vh;
+  width: 75vh;
+  margin: auto;
+}
+
+.pizza-image {
+  margin-top: 70px;
+  margin-left: 40px;
+}
+
+.pizza-menu {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+.fillings-block {
+  padding: 20px;
+}
+
+.filling {
+  margin-top: 10px;
+  margin-buttom: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr;
+}
+
+.filling-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.subtotal-price {
+  float: right;
+  margin-right: 280px;
+}

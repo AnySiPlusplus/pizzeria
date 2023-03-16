@@ -8,8 +8,9 @@ import './change_email';
 import './change_password';
 import './delete_account_button';
 import './review_rating_stars';
-import './order_items';
 import './delete_order_item';
+import './order_items';
+import './check_box_filling';
 
 window.jQuery = $;
 window.$ = $;
