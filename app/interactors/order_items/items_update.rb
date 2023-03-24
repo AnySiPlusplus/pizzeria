@@ -11,7 +11,7 @@ module OrderItems
     private
 
     def quantity_less_minimum_count?
-      MINIMUM_PIZZAS_QUANTIY > permit_params[:quantity].to_i
+      permit_params[:quantity].to_i < MINIMUM_PIZZAS_QUANTIY
     end
 
     def order_item
