@@ -469,6 +469,7 @@ GEM
       version_gem (~> 1.1, >= 1.1.1)
     sort_alphabetical (1.1.0)
       unicode_utils (>= 1.2.2)
+    spring (4.0.0)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -554,6 +555,7 @@ DEPENDENCIES
   simple_form
   simplecov
   site_prism (~> 3.7.3)
+  spring
   sprockets-rails
   tzinfo-data
 
@@ -561,4 +563,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.13
+   2.4.7

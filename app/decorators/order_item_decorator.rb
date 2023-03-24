@@ -8,4 +8,8 @@ class OrderItemDecorator < ApplicationDecorator
   def price
     pizza.price * quantity
   end
+
+  def amount_pay
+    price + object.pizza.fillings.where(type: 'AdditionalFilling').sum(&:price)
+  end
 end

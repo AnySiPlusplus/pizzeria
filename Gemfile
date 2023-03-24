@@ -37,6 +37,7 @@ gem 'sprockets-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
+  gem "spring"
   gem 'bullet'
   gem 'capybara'
   gem 'letter_opener'

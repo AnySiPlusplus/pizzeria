@@ -1,22 +1,22 @@
 - @order_items.each do |order_item|
-  %tr{ class: "#{order_item.id}" }
+  %tr.table-hover-custom{ class: "#{order_item.id}" }
     %td
       .general-img-wrap-table
         = image_tag(order_item.first_image(:small))
     %td
       %p.title= order_item.pizza.name
-      = link_to 'Filling', fillings_path(order_item_id: order_item.id)
+      = link_to 'Fillings', fillings_path(order_item_id: order_item.id), class: 'btn btn-primary'
     %td
       %span.font-16.in-gold-500= order_item.pizza.format_price
     %td
       .input-group.output_button
-        %a.input-link.d-none.minus-pizza-quantity{ data: { id: order_item.id, authenticity_token: form_authenticity_token } }
+        %a.input-link.d-none.minus-pizza-quantity{ data: { id: order_item.id, pizza_id: order_item.pizza.id, authenticity_token: form_authenticity_token } }
           %i.fa.fa-minus.line-heaght-40
-        %input.form-control.quantity-input.quantity{type: "text", value: order_item.quantity, class: "#{order_item.id}",  data: { id: order_item.id, authenticity_token: form_authenticity_token, total: order_item.price.cents } }
-        %a.input-link.d-none.plus-pizza-quantity{ data: { id: order_item.id, authenticity_token: form_authenticity_token } }
+        %input.form-control.quantity-input.quantity{type: "text", value: order_item.quantity, class: "#{order_item.id}",  data: { id: order_item.id, pizza_id: order_item.pizza.id, authenticity_token: form_authenticity_token, total: order_item.price.cents } }
+        %a.input-link.d-none.plus-pizza-quantity{ data: { id: order_item.id, pizza_id: order_item.pizza.id, authenticity_token: form_authenticity_token } }
           %i.fa.fa-plus.line-heaght-40
     %td
-      %span.font-16.in-gold-500.subtotal{ data: { price: order_item.pizza.price.cents, currency: order_item.price.currency.symbol }, class: "#{order_item.id}" }= order_item.price.format
+      %span.font-16.in-gold-500.subtotal{ data: { price: order_item.pizza.price.cents, currency: order_item.price.currency.symbol }, class: "#{order_item.id}" }= order_item.amount_pay.format
     %td
       %button.close.general-cart-close.delete-order-item{type: "button", 'aria-label': "Close", class: "#{order_item.id}", data: { id: order_item.id, authenticity_token: form_authenticity_token } }
         %span{'aria-hidden': "true"} &times;

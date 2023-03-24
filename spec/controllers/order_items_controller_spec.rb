@@ -29,8 +29,12 @@ RSpec.describe OrderItemsController, type: :controller do
   end
 
   describe '#update' do
+    before do
+      allow(controller).to receive(:current_order).and_return(order_item.order)
+    end
+
     it 'redirect to cart path after update order item' do
-      post :update, params: { order_id: order_item.order.id, id: order_item.id, order_item: order_item_params }
+      post :update, params: { id: order_item.id, order_item: { quantity: 1, pizza_id: order_item.pizza.id } }
 
       expect(response.status).to eq(204)
     end

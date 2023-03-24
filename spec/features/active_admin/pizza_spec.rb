@@ -1,5 +1,5 @@
 RSpec.describe 'Pizza', type: :feature do
-  let!(:pizza) { create(:pizza) }
+  let!(:pizza) { create(:ordinary_pizza) }
   let(:admin_user) { create(:admin_user) }
 
   before { login_as(admin_user, scope: :admin_user) }
@@ -30,7 +30,7 @@ RSpec.describe 'Pizza', type: :feature do
   describe 'Create' do
     let(:page) { Pages::ActiveAdmin::Pizza::Create.new }
     let(:show_page) { Pages::ActiveAdmin::Pizza::Show.new }
-    let(:params) { attributes_for(:pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension) }
+    let(:params) { attributes_for(:ordinary_pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension).except(:type) }
     let(:index_page) { Pages::ActiveAdmin::Pizza::Index.new }
 
     context 'when admin redirect to pizza create path' do
@@ -80,7 +80,7 @@ RSpec.describe 'Pizza', type: :feature do
     end
 
     context 'when admin view pizza' do
-      let!(:pizza) { create(:pizza) }
+      let!(:pizza) { create(:ordinary_pizza) }
 
       before do
         page.load(id: pizza.id)
@@ -107,7 +107,7 @@ RSpec.describe 'Pizza', type: :feature do
     context 'when admin edit pizza' do
       before do
         page.load(id: pizza.id)
-        page.fill_form(attributes_for(:pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension,
+        page.fill_form(attributes_for(:ordinary_pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension,
                                               fillings: 'not repeated filling'))
       end
 
@@ -118,7 +118,7 @@ RSpec.describe 'Pizza', type: :feature do
 
     context 'when admin add images to pizzas' do
       let(:params) do
-        attributes_for(:pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension,
+        attributes_for(:ordinary_pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension,
                                fillings: 'not repeated pilling')
       end
 

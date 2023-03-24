@@ -11,6 +11,8 @@ import './review_rating_stars';
 import './delete_order_item';
 import './order_items';
 import './check_box_filling';
+import './fillings';
+import './fullscreen';
 
 window.jQuery = $;
 window.$ = $;

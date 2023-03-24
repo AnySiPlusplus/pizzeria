@@ -1,14 +1,29 @@
-.fillings {
+.fillings-page {
   height: 100vh;
-  padding-top: 50px;
+  padding-top: 10px;
+  display: flex;
+  margin-bottom: 30px;
 }
 
 .filling-menu {
-  height: 75vh;
-  width: 180vh;
-  margin: auto;
-  padding-top: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.footer-bar {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr ;
+  height: auto;
+}
+
+.active {
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
+}
+
 
 .choose-fillings {
   height: 50vh;
@@ -31,15 +46,29 @@
 }
 
 .filling {
-  margin-top: 10px;
-  margin-buttom: 10px;
+  padding-top: 10px;
   display: grid;
+  margin-right: auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+.addition-filling {
+  padding-top: 10px;
+  display: grid;
+  margin-right: auto;
   grid-template-columns: 1fr 1fr 0.5fr;
 }
 
-.filling-title {
+.fillings-title {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  padding: 10px;
   text-align: center;
-  margin-bottom: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
 }
 
 .checkbox {
@@ -47,7 +76,42 @@
   margin-right: 200px;
 }
 
+.addition-checkbox {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
 .subtotal-price {
-  float: right;
-  margin-right: 280px;
+  text-align: right;
+  padding-right: 20vh;
+}
+
+.border-block {
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
+}
+
+.back-to-cart {
+  padding-right: 200px;
+}
+
+.button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ordinary-title:hover {
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
+}
+
+.additional-title:hover {
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #0a0a0a;
 }

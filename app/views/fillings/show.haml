@@ -1,30 +1,41 @@
-.fillings
+.fillings-page
   .filling-menu.dark-theme.dark-block
     .pizza-menu
       .thumbnail.dark-theme.pizza-image
         %img{src: "https://i.postimg.cc/63Gn2tYs/9.png"}
       .choose-fillings.dark-theme
         .fillings-block
-          .filling-title
-            %h1 Fillings
-          - @fillings.each do |filling|
-            .filling
-              .checkbox
-                %input{ type: 'checkbox', checked: include_filling(@order_item.pizza, filling), class: 'complete', name: 'filling', id: 'filling', data: { filling_id: filling.id, price: filling.price.cents,
-                 order_item_id: @order_item.id, authenticity_token: form_authenticity_token } }
-                %h4= filling.name
-              .price-filling
-                %h4= filling.price.format
-          .additional-fillings-title
-            %h1 Additional Fillings
-          - @additional_fillings.each do |filling|
-            .addition-filling
-              .addition-checkbox
-                %input{ type: 'checkbox' }
-                %h4= filling.name
-              .price-additianal-filling
-                %h4= filling.price.format
-    .subtotal-price
-      %h3 Total price $ 45.00
-    .button-back-to-cart
-      = link_to 'Back to cart', cart_path
+          .border-block
+            .fillings-title
+              .ordinary-title#ordinary-button.active
+                %h1 Fillings
+              .additional-title#adding-button
+                %h1 Additional Fillings
+            .ordinary-fillings#ordinary
+              - @fillings.each do |filling|
+                .filling
+                  .checkbox
+                    %input{ type: 'checkbox', checked: include_filling(@order_item.pizza, filling), class: 'complete', name: 'filling', id: 'filling', data: { filling_id: filling.id, price: filling.price.cents,
+                     order_item_id: @order_item.id, authenticity_token: form_authenticity_token } }
+                  .filling-name
+                    %h4= filling.name
+            .additional-fillings#adding.hidden
+              - @additional_fillings.each do |filling|
+                .addition-filling
+                  .addition-checkbox
+                    %input{ type: 'checkbox', checked: include_filling(@order_item.pizza, filling), class: 'complete', name: 'filling', id: 'filling', data: { filling_id: filling.id, price: filling.price.cents,
+                     order_item_id: @order_item.id, authenticity_token: form_authenticity_token } }
+                  .filling-name
+                    %h4= filling.name
+                  .price-additianal-filling
+                    %h4= filling.price.format
+    .footer-bar
+      .button
+        .back-to-cart
+          = link_to 'Back to cart', cart_path, class: 'btn btn-primary'
+      .subtotal-price
+        %tr
+          %td
+            %strong.font-18 Total Price:
+          %td
+            %strong.font-18#total_price{ data: { price: @order_item.amount_pay, currency:  @order_item.amount_pay.currency.symbol  } }= @order_item.amount_pay.format

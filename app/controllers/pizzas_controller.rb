@@ -15,7 +15,7 @@ class PizzasController < ApplicationController
     @pizza = Pizza.find(params[:id]).decorate
     @dimensions = PizzaDimension.all
     @review_form = @pizza.reviews.build if user_signed_in?
-    @reviews = Review.where(pizza_id: @pizza.id, status: :approved).decorate
+    @reviews = Review.where(pizza_id: @pizza.id, status: :approved).includes([:user]).decorate
   end
 
   private

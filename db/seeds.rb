@@ -25,7 +25,7 @@ fillings = Factory.new.create_list(:filling, 8)
 ADDITIONAL_FILLINGS.each { |filling| Factory.new.create(:filling, name: filling, type: :AdditionalFilling) }
 
 13.times do
-  Factory.new.create(:pizza, category: categories.sample, pizza_dimension: dimensions.sample,
+  Factory.new.create(:ordinary_pizza, category: categories.sample, pizza_dimension: dimensions.sample,
                              fillings: fillings.sample(rand(3..6)))
 end
 

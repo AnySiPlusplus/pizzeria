@@ -11,4 +11,4 @@
           %a.margin-4{href: new_user_registration_path }= t('.sign_up')
       %a.shop-link.pull-right.hidden-xs{href: cart_path}
         %span.shop-icon
-          %span.shop-quantity= current_order.order_items.count
+          %span.shop-quantity{ data: {order_items: current_order.order_items.count} }= current_order.order_items.count
