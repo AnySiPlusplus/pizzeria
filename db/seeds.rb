@@ -26,7 +26,7 @@ ADDITIONAL_FILLINGS.each { |filling| Factory.new.create(:filling, name: filling,
 
 13.times do
   Factory.new.create(:ordinary_pizza, category: categories.sample, pizza_dimension: dimensions.sample,
-                             fillings: fillings.sample(rand(3..6)))
+                                      fillings: fillings.sample(rand(3..6)))
 end
 
 AdminUser.create!(email: Rails.application.credentials.dig(:admin, :user_name),

@@ -30,7 +30,9 @@ RSpec.describe 'Pizza', type: :feature do
   describe 'Create' do
     let(:page) { Pages::ActiveAdmin::Pizza::Create.new }
     let(:show_page) { Pages::ActiveAdmin::Pizza::Show.new }
-    let(:params) { attributes_for(:ordinary_pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension).except(:type) }
+    let(:params) do
+      attributes_for(:ordinary_pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension).except(:type)
+    end
     let(:index_page) { Pages::ActiveAdmin::Pizza::Index.new }
 
     context 'when admin redirect to pizza create path' do
@@ -108,7 +110,7 @@ RSpec.describe 'Pizza', type: :feature do
       before do
         page.load(id: pizza.id)
         page.fill_form(attributes_for(:ordinary_pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension,
-                                              fillings: 'not repeated filling'))
+                                                       fillings: 'not repeated filling'))
       end
 
       it { expect { page.form.button.click }.to(change { Pizza.first.name }) }
@@ -119,7 +121,7 @@ RSpec.describe 'Pizza', type: :feature do
     context 'when admin add images to pizzas' do
       let(:params) do
         attributes_for(:ordinary_pizza, category: pizza.category, pizza_dimension: pizza.pizza_dimension,
-                               fillings: 'not repeated pilling')
+                                        fillings: 'not repeated pilling')
       end
 
       before do
