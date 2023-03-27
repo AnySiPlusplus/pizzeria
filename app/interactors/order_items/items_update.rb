@@ -11,15 +11,15 @@ module OrderItems
     private
 
     def quantity_less_minimum_count?
-      MINIMUM_PIZZAS_QUANTIY > permit_params[:quantity].to_i
+      permit_params[:quantity].to_i < MINIMUM_PIZZAS_QUANTIY
     end
 
     def order_item
-      @order_item ||= OrderItem.find(context.params[:id])
+      @order_item ||= context.current_order.order_items.find_by(pizza_id: permit_params[:pizza_id])
     end
 
     def permit_params
-      @permit_params ||= context.params.require(:order_item).permit(:quantity)
+      @permit_params ||= context.params.require(:order_item).permit(:pizza_id, :quantity)
     end
   end
 end

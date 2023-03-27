@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   end
 
   resource :cart, only: %i[show update]
-  resource :order_items, except: :show
+  resource :order_items
+  resource :fillings
 
   resource :address, only: %i[edit update]
   resource :user_photo, only: %i[edit update destroy create]

@@ -22,6 +22,8 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 RSpec/MultipleMemoizedHelpers:
   Max: 6
+AllCops:
+  SuggestExtensions: false
 Metrics/AbcSize:
   Exclude:
     - 'db/**/*.rb'

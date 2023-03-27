@@ -1,4 +1,4 @@
-%main.container
+%main.container.mr-t-20.pizza-fullscreen
   %a.general-back-link{href: pizzas_path}
     %i.fa.fa-long-arrow-left.mr-15
     Back to results
@@ -12,8 +12,6 @@
             %a.img-link
               = image_tag(image.image_url(:small), class: 'img-responsive')
     .col-sm-6
-      %h1.mt-res-0 Real-Life Responsive Web Design
-      %p.lead.small Vitaly Friedman, Daniel Mall,Vitaly Friedman
       .row
         = render 'pizzas/partials_show/add_to_cart', pizza: @pizza
       .general-info-wrap.divider-lg

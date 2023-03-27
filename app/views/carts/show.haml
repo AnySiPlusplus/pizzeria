@@ -1,7 +1,7 @@
-%main.container.general-main-wrap
+%main.container.general-main-wrap.fillings.cart-conteiner
   %h1.general-title-margin Cart
   .hidden-xs
-    %table.table.table-hover
+    %table.table
       %tr.no-hover
         %th.col-pic.pl-0
           %span.in-grey-600 Product
@@ -16,14 +16,12 @@
       = render 'carts/order_items'
   .general-order-wrap
     .row
-      .col-sm-8
+      .move-right
         .res-mr-200.text-center.general-text-right
-          %p.in-gold-500.font-18 Order Summary
           %table.general-summary-table.general-summary-table-right.general-text-right
             %tr
               %td
-                %strong.font-18 Order Total:
+                %strong.font-18.in-gold-500.font-18 Order Total:
               %td
-                %strong.font-18#total_price= @order.amount_pay.zero? ? @order.amount_pay : @order.amount_pay.format
-          %button.btn.btn-default.mb-20.visible-xs-inline-block Checkout
+                %strong.font-18.in-gold-500.font-18#total_price= @order.amount_pay.zero? ? @order.amount_pay : @order.amount_pay.format
   %button.btn.btn-default.mb-20.hidden-xs.center-block Checkout

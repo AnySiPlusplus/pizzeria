@@ -1,4 +1,4 @@
-%h3.in-gold-500.mb-25=  t('.reviews_count', count: @reviews.count)
+%h3.in-gold-500.mb-25#reviews{ data: { reviews: @reviews.count } }=  t('.reviews_count', count: @reviews.count)
 - @reviews.each do |review|
   .general-message-wrap.divider-lg
     .clearfix

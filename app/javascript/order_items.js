@@ -51,6 +51,7 @@ class Counter {
         authenticity_token: this.params.data('authenticityToken'),
         order_item: {
           quantity: quantity,
+          pizza_id: this.params.data('pizzaId'),
         },
       }),
       contentType: 'application/json',
