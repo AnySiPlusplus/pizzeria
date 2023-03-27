@@ -1,0 +1,17 @@
+%main.container.full_screen
+  .row
+    = render 'fast_authentificates/form_with_password'
+    .col-md-5.col-md-offset-1.mb-60
+      .text-center
+        %h3.general-subtitle= t('.new_customer')
+        = button_to '', user_github_omniauth_authorize_path, class: 'general-login-icon fa fa-github button_github'
+        = button_to '',  user_facebook_omniauth_authorize_path, class: 'general-login-icon fa fa-facebook'
+        = button_to '',  user_google_oauth2_omniauth_authorize_path, class: 'general-login-icon fa fa-google'
+        %p.general-login-text= t('.or')
+      %form.general-form
+      = simple_form_for(@fast_registration_form || Users::PrivacyEmail.new(User.new), url: fast_authentificate_path, method: :post, wrapper: :default) do |f|
+        .mb-40
+          %p.mb-5= t('.quik_register')
+          %p.general-info-text.font-12.mb-20= t('.change_password')
+          = f.input :email, placeholder: t('.enter_email')
+        = f.button :submit, t('.continue'), class: 'btn btn-default mb-20', id: 'continue_checkout',  disabled: true

@@ -24,4 +24,5 @@
                 %strong.font-18.in-gold-500.font-18 Order Total:
               %td
                 %strong.font-18.in-gold-500.font-18#total_price= @order.amount_pay.zero? ? @order.amount_pay : @order.amount_pay.format
-  %button.btn.btn-default.mb-20.hidden-xs.center-block Checkout
+  .text-center
+    = link_to t('.checkout'), fast_authentificate_path, class: "btn btn-default mb-20 hidden-xs center #{'disabled' unless @order_items.any?}"
