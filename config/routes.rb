@@ -16,4 +16,9 @@ Rails.application.routes.draw do
 
   resource :address, only: %i[edit update]
   resource :user_photo, only: %i[edit update destroy create]
+  resource :fast_authentificate, only: %i[create show]
+
+  namespace :checkouts do
+    resource :address, only: %i[show]
+  end
 end
