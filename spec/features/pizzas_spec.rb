@@ -2,14 +2,14 @@ RSpec.describe 'Pizzas', type: :feature do
   describe 'Index' do
     let(:page) { Pages::Pizzas::Index.new }
     let(:category) { create(:category) }
-    let!(:pizzas) { create_list(:pizza, 13, category: category) }
+    let!(:pizzas) { create_list(:ordinary_pizza, 13, category: category) }
 
     before do
       page.load
     end
 
     context 'when check body section' do
-      let!(:pizzas) { create(:pizza, category: category) }
+      let!(:pizzas) { create(:ordinary_pizza, category: category) }
 
       before { page.body.button_sort_by.click }
 
@@ -72,7 +72,7 @@ RSpec.describe 'Pizzas', type: :feature do
     end
 
     context 'when hover pizza image' do
-      let!(:pizzas) { create(:pizza, category: category) }
+      let!(:pizzas) { create(:ordinary_pizza, category: category) }
 
       before do
         page.body.pizzas.first.hover

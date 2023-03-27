@@ -1,8 +1,12 @@
 @import "bootstrap/dist/css/bootstrap";
 @import "custom/variables";
 @import "custom/theme";
-@import "bookstore/general";
-@import "bookstore/utils/helpers";
+@import "pizzeria/general";
+@import "pizzeria/utils/helpers";
 @import "custom/body_themes";
 @import "custom/header";
 @import "custom/home_index_dark_block";
+@import "custom/fillings";
+@import "custom/carts";
+@import "custom/pizza";
+@import "custom/button_pizza_shop";

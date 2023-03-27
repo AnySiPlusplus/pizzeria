@@ -41,6 +41,7 @@ group :development, :test do
   gem 'capybara'
   gem 'letter_opener'
   gem 'rspec-rails', '6.0.0.rc1'
+  gem 'spring'
 end
 
 group :test do

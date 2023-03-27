@@ -10,6 +10,9 @@ class Pizza < ApplicationRecord
   has_many :pizza_fillings, dependent: :destroy
   has_many :fillings, through: :pizza_fillings
 
+  has_many :order_items, dependent: :destroy
+  has_many :orders, through: :order_items
+
   accepts_nested_attributes_for :pizza_pictures, allow_destroy: true
 
   validates :name, presence: true

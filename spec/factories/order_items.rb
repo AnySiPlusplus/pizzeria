@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :order_item do
     quantity { rand(1..10) }
-    pizza { create(:pizza) }
+    pizza { create(:ordinary_pizza) }
     price_cents { rand(1000...4000) }
     order { create(:order) }
   end

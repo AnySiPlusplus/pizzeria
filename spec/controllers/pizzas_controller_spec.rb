@@ -7,7 +7,7 @@ RSpec.describe PizzasController, type: :controller do
   end
 
   context 'when GET show path' do
-    let(:pizza) { create(:pizza) }
+    let(:pizza) { create(:ordinary_pizza) }
 
     it '#show' do
       get :show, params: { id: pizza.id }

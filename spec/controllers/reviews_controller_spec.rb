@@ -1,7 +1,7 @@
 RSpec.describe ReviewsController, type: :controller do
   describe '#create' do
     let(:user) { create :user }
-    let(:pizza) { create(:pizza) }
+    let(:pizza) { create(:ordinary_pizza) }
 
     let(:review_params) { attributes_for(:review, pizza_id: pizza.id) }
 
