@@ -13,14 +13,14 @@ class FastAuthentificatesController < ApplicationController
   private
 
   def authenticate_user!
-    redirect_to checkouts_address_path if user_signed_in?
+    redirect_to checkouts_delivery_path if user_signed_in?
   end
 
   def sign_in_user(result)
     setups_order_from_user(result)
     sign_in(:user, result.user)
     result.user.send_reset_password_instructions
-    redirect_to checkouts_address_path
+    redirect_to checkouts_delivery_path
   end
 
   def bad_outcome(result)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_15_113959) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_28_101539) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -60,6 +60,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_15_113959) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "deliveries", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "time", null: false
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "USD", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "fillings", force: :cascade do |t|
     t.text "name"
     t.integer "price_cents", default: 0, null: false
@@ -85,6 +94,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_15_113959) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "subtotal_cents", default: 0, null: false
+    t.string "subtotal_currency", default: "USD", null: false
+    t.integer "status"
+    t.bigint "delivery_id"
+    t.datetime "completed_at"
+    t.index ["delivery_id"], name: "index_orders_on_delivery_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -160,6 +175,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_15_113959) do
   add_foreign_key "addresses", "users"
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "pizzas"
+  add_foreign_key "orders", "deliveries"
   add_foreign_key "orders", "users"
   add_foreign_key "pizza_fillings", "fillings"
   add_foreign_key "pizza_fillings", "pizzas"

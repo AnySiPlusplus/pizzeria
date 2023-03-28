@@ -1,0 +1,10 @@
+en:
+  checkouts:
+    deliveries:
+      show:
+        credit_card: 'Credit Card'
+        method: 'Method'
+        time: 'Time'
+        price: 'Price'
+        save_and_continue: 'save and continue'
+        order_total: 'Order Total:'
