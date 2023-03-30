@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_28_101539) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_29_101500) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,6 +52,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_101539) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "cards", force: :cascade do |t|
+    t.string "card_number", null: false
+    t.string "card_name", null: false
+    t.string "validity", null: false
+    t.integer "cvv", null: false
+    t.bigint "order_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_cards_on_order_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -156,6 +167,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_101539) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
+  create_table "shipping_addresses", force: :cascade do |t|
+    t.bigint "order_id", null: false
+    t.string "receiver_name", limit: 50, null: false
+    t.string "street", limit: 50, null: false
+    t.string "building", limit: 50, null: false
+    t.string "city", limit: 50, null: false
+    t.string "phone", limit: 15, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_shipping_addresses_on_order_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -173,6 +196,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_101539) do
   end
 
   add_foreign_key "addresses", "users"
+  add_foreign_key "cards", "orders"
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "pizzas"
   add_foreign_key "orders", "deliveries"
@@ -183,4 +207,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_101539) do
   add_foreign_key "pizzas", "pizza_dimensions"
   add_foreign_key "reviews", "pizzas"
   add_foreign_key "reviews", "users"
+  add_foreign_key "shipping_addresses", "orders"
 end

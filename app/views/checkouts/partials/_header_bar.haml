@@ -1,22 +1,21 @@
-%h1.general-title-margin Checkout
+%h1.general-title-margin= t('.checkout')
 %ul.steps.list-inline
-  %li.step.active
-    %span.step-number 1
-    %span.step-text.hidden-xs Delivery
+  %li.step{ class: current_status(checkouts_delivery_path)}
+    %span.step-number= t('.first_step')
+    = link_to t('.delivery'), checkouts_delivery_path, class: 'step-text hidden-xs'
   %li.step-divider
-  %li.step
-    %span.step-number 2
-    %span.step-text.hidden-xs Address
+  %li.step{ class: current_status(checkouts_address_path) }
+    %span.step-number= t('.second_step')
+    = link_to t('.address'), checkouts_address_path, class: 'step-text hidden-xs'
   %li.step-divider
-  %li.step
-    %span.step-number 3
-    %span.step-text.hidden-xs Payment
+  %li.step{ class: current_status(checkouts_payment_path) }
+    %span.step-number= t('.third_step')
+    = link_to t('.payment'), checkouts_payment_path, class: 'step-text hidden-xs'
   %li.step-divider
-  %li.step
-    %span.step-number 4
-    %span.step-text.hidden-xs Confirm
+  %li.step{ class: current_status(checkouts_confirm_path)}
+    %span.step-number= t('.fourth_step')
+    = link_to t('.confirm'), checkouts_confirm_path, class: 'step-text hidden-xs'
   %li.step-divider
-  %li.step
-    %span.step-number 5
-    %span.step-text.hidden-xs Complete
-  %h3.general-subtitle Credit Card
+  %li.step{ class: current_status(checkouts_complete_path)}
+    %span.step-number= t('.fifth_step')
+    %span.step-text.hidden-xs= t('.complete')

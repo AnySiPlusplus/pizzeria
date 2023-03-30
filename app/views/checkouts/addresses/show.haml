@@ -1,1 +1,14 @@
-%h1 checkout address
+%main.container
+  = render 'checkouts/partials/header_bar'
+  .res-mb-100
+    .row
+      .col-md-5.mb-40
+        .visible-xs.visible-sm
+          %h3.general-subtitle= t('.shipping')
+          %p.general-info-text= t('.all_fields_required')
+        #billing_form
+          = render 'checkouts/partials/address_form'
+    .general-text-align.mb-60
+      = render 'checkouts/partials/order_total'
+      .text-center
+        = button_to t('.button_complete'), checkouts_address_path, class: "btn btn-default center mb-20", disabled: shipping_address_present?

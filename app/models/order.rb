@@ -7,6 +7,9 @@ class Order < ApplicationRecord
   has_many :order_items, dependent: :destroy
   has_many :pizzas, through: :order_items
 
+  has_one :shipping_address, dependent: :destroy
+  has_one :card, dependent: :destroy
+
   belongs_to :user, optional: true
   belongs_to :delivery, optional: true
 

@@ -1,0 +1,8 @@
+= simple_form_for @shipping_form, url: checkouts_address_path, method: :put, wrapper: :profile do |f|
+  = f.input :receiver_name, placeholder: 'Receiver Name'
+  = f.input :street, placeholder: 'Street'
+  = f.input :building, placeholder: 'Building'
+  = f.input :city, placeholder: 'City'
+  = f.input :phone, placeholder: 'Phone'
+  .text-center.general-text-align
+    = f.button :submit , 'Save', class: 'btn-default', id: "shipping_form", disabled: false

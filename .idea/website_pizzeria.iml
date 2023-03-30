@@ -18,13 +18,13 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/components" />
+      <excludeFolder url="file://$MODULE_DIR$/log" />
       <excludeFolder url="file://$MODULE_DIR$/public/packs" />
+      <excludeFolder url="file://$MODULE_DIR$/public/system" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/cache" />
-      <excludeFolder url="file://$MODULE_DIR$/log" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp" />
-      <excludeFolder url="file://$MODULE_DIR$/public/system" />
-      <excludeFolder url="file://$MODULE_DIR$/components" />
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-3.0.3" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -633,6 +633,7 @@
               <RakeTaskImpl description="Run the code examples in spec/decorators" fullCommand="spec:decorators" id="decorators" />
               <RakeTaskImpl description="Run the code examples in spec/features" fullCommand="spec:features" id="features" />
               <RakeTaskImpl description="Run the code examples in spec/forms" fullCommand="spec:forms" id="forms" />
+              <RakeTaskImpl description="Run the code examples in spec/interactors" fullCommand="spec:interactors" id="interactors" />
               <RakeTaskImpl description="Run the code examples in spec/models" fullCommand="spec:models" id="models" />
               <RakeTaskImpl description="Run the code examples in spec/queries" fullCommand="spec:queries" id="queries" />
               <RakeTaskImpl description="" fullCommand="spec:prepare" id="prepare" />

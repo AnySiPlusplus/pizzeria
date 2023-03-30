@@ -27,7 +27,7 @@ RSpec.describe 'FastAuthentificate', type: :feature do
       page.button_continue_checkout.click
     end
 
-    it { expect(page).to have_current_path(checkouts_address_path) }
+    it { expect(page).to have_current_path(checkouts_delivery_path) }
   end
 
   context 'when a user use quick register and write wrong email' do
