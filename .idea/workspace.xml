@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea77ef-0669-4f5d-b7e7-bb5be8c4f1fa" name="Changes" comment="checkout function without tests">
-      <change afterPath="$PROJECT_DIR$/spec/controllers/checkouts/comfirms_controller_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/controllers/checkouts/confirms_controller_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/controllers/checkouts/payments_controller_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/interactors/checkouts/create_order_card_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/interactors/checkouts/finish_order_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/interactors/checkouts/update_order_delivery_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/decorators/pizzas_decorator_spec.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/checkouts/partials/_order_total.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/checkouts/partials/_order_total.haml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/views/checkout_address.en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/views/checkout_address.en.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/views/checkout_delivery.en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/views/checkout_delivery.en.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/views/checkouts_partials_header_bar.en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/views/checkouts_partials_header_bar.en.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,22 +42,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultRubyCreateTestTemplate&quot;: &quot;RSpec&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/siplusplus/done_pj/website_pizzeria&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultRubyCreateTestTemplate": "RSpec",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/siplusplus/done_pj/website_pizzeria",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ruby.rails.projectView.checked": "true",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="RSpec.Checkouts::CompletesController when GET show">
     <configuration type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
       <module name="website_pizzeria" />
@@ -374,7 +372,7 @@
       <workItem from="1680193560219" duration="2018000" />
       <workItem from="1680279157780" duration="2325000" />
       <workItem from="1680284524866" duration="2683000" />
-      <workItem from="1680512873695" duration="1157000" />
+      <workItem from="1680512873695" duration="2247000" />
     </task>
     <task id="LOCAL-00001" summary="checkout function without tests">
       <created>1680195529627</created>
@@ -406,7 +404,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/website_pizzeria@Checkouts__CreateOrderCard.rcov" NAME="Checkouts::CreateOrderCard Coverage Results" MODIFIED="1680286634821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="website_pizzeria" />
-    <SUITE FILE_PATH="coverage/website_pizzeria@Checkouts__CompletesController_when_GET_show.rcov" NAME="Checkouts::CompletesController when GET show Coverage Results" MODIFIED="1680514018246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="website_pizzeria" />
+    <SUITE FILE_PATH="coverage/website_pizzeria@Checkouts__CompletesController_when_GET_show.rcov" NAME="Checkouts::CompletesController when GET show Coverage Results" MODIFIED="1680514034100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="website_pizzeria" />
     <SUITE FILE_PATH="coverage/website_pizzeria@Checkouts__FinishOrder.rcov" NAME="Checkouts::FinishOrder Coverage Results" MODIFIED="1680286818365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="website_pizzeria" />
     <SUITE FILE_PATH="coverage/website_pizzeria@Card.rcov" NAME="Card Coverage Results" MODIFIED="1680194099471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="website_pizzeria" />
     <SUITE FILE_PATH="coverage/website_pizzeria@Checkouts__PaymentsController_when_GET_show.rcov" NAME="Checkouts::PaymentsController when GET show Coverage Results" MODIFIED="1680284159437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="website_pizzeria" />
