@@ -1,0 +1,14 @@
+- @order_items.each do |order_item|
+  %tr
+    %td
+      .general-img-wrap-table
+        = image_tag(order_item.pizza.first_image(:medium), class: 'cart-img-shadow pull-left')
+    %td
+      %p.title= order_item.pizza.name
+      %p.in-grey-600.fw-300= order_item.pizza.short_description
+    %td
+      %span.font-16.in-gold-500= order_item.pizza.price.format
+    %td
+      %span.ml-30= order_item.quantity
+    %td
+      %span.font-16.in-gold-500= order_item.amount_pay.format
