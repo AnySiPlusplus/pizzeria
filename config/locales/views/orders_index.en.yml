@@ -16,7 +16,7 @@ en:
       billing_address: 'Billing Address'
       delivery: 'Shipments'
       payment_info: 'Payment Information'
-      book: 'Book'
+      pizza: 'Pizza'
       price: 'Price'
       quantity: 'Quantity'
       total: 'Total'

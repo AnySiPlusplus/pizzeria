@@ -19,6 +19,7 @@
               %ul.dropdown-menu
                 %li
                   = link_to 'Settings', edit_address_path
+                  = link_to 'Orders', orders_path
                 %li.divider{role: "separator"}
                   %li
                     = button_to t('.log_out'), destroy_user_session_path, method: :delete, class: 'button_log_out'

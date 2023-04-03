@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   root 'homes#index', as: 'home'
 
-  resources :pizzas, only: %I[show index] do
+  resources :pizzas, only: %i[show index] do
     resources :reviews, only: :create
   end
 
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resource :fillings
 
   resource :address, only: %i[edit update]
-  resource :user_photo, only: %i[edit update destroy create]
+  resource :user_photo, except: :show
   resource :fast_authentificate, only: %i[create show]
 
   namespace :checkouts do
@@ -25,4 +25,6 @@ Rails.application.routes.draw do
     resource :confirm, only: %i[show create]
     resource :complete, only: %i[show]
   end
+
+  resources :orders, only: %i[show index]
 end
