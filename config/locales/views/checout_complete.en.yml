@@ -1,0 +1,13 @@
+en:
+  checkouts:
+    completes:
+      show:
+        thank_for_order: 'Thank You for your Order!'
+        send_leter: 'An order confirmation has been has been sent to %{email}'
+        order_id: 'Order #R%{number}'
+        pizza: 'Pizza'
+        price: 'Price'
+        quantity: 'Quantity'
+        total: 'Total'
+        back_to_store: 'Back to store'
+    date_format: '%Y.%m.%d'

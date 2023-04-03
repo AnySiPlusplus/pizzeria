@@ -1,0 +1,30 @@
+%main.container.general-main-wrap
+  = render 'checkouts/partials/header_bar'
+  = simple_form_for Delivery.new, url: checkouts_delivery_path, method: :put do |f|
+    .hidden-xs.mb-res-50
+      %table.table.table-hover
+        %thead
+          %tr
+            %th.col-method
+              %span.in-grey-600.ml-40= t('.method')
+            %th
+              %span.in-grey-600= t('.time')
+            %th
+              %span.in-grey-600= t('.price')
+        %tbody
+          - @deliveries.each do |delivery|
+            %tr
+              %td
+                .form-group.radio.mt-0.mb-0
+                  %label.radio-label
+                    = f.radio_button :id, delivery.id, class: 'radio-input', hidden: true
+                    %span.radio-icon
+                    %span.radio-text= delivery.name
+              %td
+                %span= delivery.time
+              %td
+                %span.font-16.in-gold-500= delivery.price.format
+    .general-text-align
+      = render 'checkouts/partials/order_total'
+    .text-center
+      = f.button :submit, t('.save_and_continue'), class: 'btn btn-default mb-20'

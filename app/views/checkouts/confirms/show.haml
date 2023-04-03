@@ -1,0 +1,54 @@
+
+%main.container.general-main-wrap
+  = render 'checkouts/partials/header_bar'
+  .row.mb-20
+    - if @shipping_address
+      .col-sm-3
+        %h3.general-subtitle Shipping Address
+        %p.general-address
+          = @shipping_address.receiver_name
+          %span.general-edit edit
+          %br
+          = @shipping_address.street
+          %br
+          = @shipping_address.building
+          %br
+          = @shipping_address.city
+          %br
+          = @shipping_address.phone
+    .col-sm-3
+      %h3.general-subtitle Shipments
+      %p.general-address
+        = @delivery.name
+        %span.general-edit edit
+        %br
+        = @delivery.time
+        %br
+        = @delivery.price.format
+    - if @card
+      .col-sm-3
+        %h3.general-subtitle Payment Information
+        %p.general-address
+          = @card.masked_card_number
+          %span.general-edit edit
+          %br
+          = @card.validity
+  .hidden-xs.divider-lg.pt-20
+    %table.table.table-hover
+      %thead
+        %tr
+          %th
+            %span.in-grey-600 Pizza
+          %th.col-method
+          %th
+            %span.in-grey-600 Price
+          %th
+            %span.in-grey-600 Quantity
+          %th
+            %span.in-grey-600 Total
+      %tbody
+        = render 'checkouts/partials/order_item'
+  .text-center.general-text-right
+    = render 'checkouts/partials/order_total'
+  .text-center
+    = button_to 'Order', checkouts_confirm_path, class: 'btn btn-default mb-20'

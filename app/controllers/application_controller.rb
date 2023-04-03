@@ -18,12 +18,12 @@ class ApplicationController < ActionController::Base
   end
 
   def current_order
-    @current_order ||= current_session
+    @current_order ||= find_or_create_current_order
   end
 
-  def current_session
-    result = Session::OrderSession.call(id: session[:order_id], current_user: current_user)
+  def find_or_create_current_order
+    result = Orders::FindOrCreate.call(id: session[:order_id], current_user: current_user)
     session[:order_id] = result.id if result.id
-    result.session
+    result.order
   end
 end

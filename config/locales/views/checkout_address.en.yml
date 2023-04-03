@@ -1,0 +1,7 @@
+en:
+  checkouts:
+      addresses:
+        show:
+          shipping: 'Shipping Address'
+          all_fields_required: 'all fields are required'
+          button_complete: 'Save and Continue'

@@ -16,7 +16,7 @@ RSpec.describe FastAuthentificatesController, type: :controller do
     it 'is redirect to checkout_path' do
       post :create, params: { users_privacy_email: { email: FFaker::Internet.email } }
 
-      expect(response).to redirect_to(checkouts_address_path)
+      expect(response).to redirect_to(checkouts_delivery_path)
     end
 
     it 'is created user' do

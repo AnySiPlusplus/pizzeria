@@ -1,0 +1,31 @@
+
+%main.container.mb-res-50
+  = render 'checkouts/partials/header_bar'
+  %h3.general-subtitle Credit Card
+  .payment
+    = simple_form_for @card_form, url: checkouts_payment_path, method: :post, wrapper: :card  do |f|
+      .max-600.mb-80
+        = f.input :card_number
+        .row
+          .col-sm-6
+            = f.input :card_name, placeholder: t('.name_card')
+          .col-sm-3
+            = f.input :validity, placeholder: t('.validity')
+          .col-sm-3
+            .form-group.relative
+              = f.input :cvv, placeholder: t('.cvv')
+              %i.fa.fa-question-circle.general-form-help.cvv-hint
+                %span.cvv-message= t('.cvv_message')
+      .general-text-align
+        = render 'checkouts/partials/order_total'
+      .text-center
+        = f.button :submit, t('.save_and_continue'), class: 'btn btn-default mb-80'
+    = simple_form_for :pay_cash, url:  checkouts_payment_path, method: :put do |f|
+      .form-group.checkbox
+        %label.checkbox-label
+          = f.check_box :cash, class: 'checkbox-input', hidden: true
+          %span.checkbox-icon
+            %i.fa.fa-check
+          %span.checkbox-text Pay Cash
+          .check_box_button
+            = f.button :submit, 'Use Cash', class: 'btn btn-default payment-button'

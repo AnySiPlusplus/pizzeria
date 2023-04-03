@@ -1,0 +1,12 @@
+%table.general-summary-table
+  - if @order.delivery
+    %tr
+      %td
+        %strong.in-gold-500.font-18 Delivery:
+      %td
+        %strong.in-gold-500.font-18= @order.delivery.price.format
+  %tr
+    %td
+      %strong.in-gold-500.font-18= t('.order_total')
+    %td
+      %strong.in-gold-500.font-18= @order.amount_pay.format

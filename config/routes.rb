@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   resource :fast_authentificate, only: %i[create show]
 
   namespace :checkouts do
-    resource :address, only: %i[show]
+    resource :delivery, only: %i[show update]
+    resource :address, only: %i[show update]
+    resource :payment, only: %i[show create update]
+    resource :confirm, only: %i[show create]
+    resource :complete, only: %i[show]
   end
 end

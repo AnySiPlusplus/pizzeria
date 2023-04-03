@@ -1,0 +1,17 @@
+en:
+  checkouts:
+      partials:
+        header_bar:
+          checkout: 'Checkout'
+          first_step: '1'
+          second_step: '2'
+          third_step: '3'
+          fourth_step: '4'
+          fifth_step: '5'
+          address: 'Address'
+          delivery: 'Delivery'
+          payment: 'Payment'
+          confirm: 'Confirm'
+          complete: 'Complete'
+        order_total:
+          order_total: 'Order Total:'

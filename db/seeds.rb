@@ -9,16 +9,24 @@ PizzaDimension.destroy_all
 Pizza.destroy_all
 Filling.destroy_all
 AdminUser.destroy_all
+Delivery.destroy_all
 
 CATEGORY_PIZZA = %i[Vegan Hot Meat].freeze
 PIZZA_DIMENSIONS = [30, 60, 90, 100].freeze
 ADDITIONAL_FILLINGS = %i[cheese meat paper].freeze
+DEVIVERY_COMPANIES = %i[FedEx UPS USPS Walmart Amazon].freeze
 
 categories = CATEGORY_PIZZA.map { |category| Category.create(name: category) }
 
 dimensions = PIZZA_DIMENSIONS.map do |dimension|
   Factory.new.create(:pizza_dimension, dimension: dimension)
 end
+
+DEVIVERY_COMPANIES.each do |company_name|
+  Delivery.create(name: company_name, time: "up to #{rand(20..50)} minutes", price_cents: rand(1000...8000))
+end
+
+Delivery.create(name: 'Take away', time: 'now', price: 0)
 
 fillings = Factory.new.create_list(:filling, 8)
 
