@@ -4,27 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19ea77ef-0669-4f5d-b7e7-bb5be8c4f1fa" name="Changes" comment="checkout function without tests">
-      <change afterPath="$PROJECT_DIR$/app/controllers/orders_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/queries/orders/orders_query.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/queries/pizzas/best_sellers_query.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/orders/_dropdown.haml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/orders/_orders.haml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/orders/index.haml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/orders/show.haml" afterDir="false" />
+    <list default="true" id="19ea77ef-0669-4f5d-b7e7-bb5be8c4f1fa" name="Changes" comment="add orders functional">
+      <change afterPath="$PROJECT_DIR$/spec/controllers/orders_controller_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/homes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/homes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/decorators/order_decorator.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/decorators/order_decorator.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/queries/base_query.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/queries/base_query.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/queries/pizzas/pizzas_query.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/queries/pizzas/pizzas_query.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/homes/_best_sellers.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/homes/_best_sellers.haml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/homes/_newest.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/homes/_newest.haml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_header_authentificate_user.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_header_authentificate_user.haml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/locales/views/orders_index.en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/views/orders_index.en.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/locales/views/pizzas_index.en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/views/pizzas.en.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +61,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Rails.website_pizzeria">
+  <component name="RunManager" selected="RSpec.OrdersController">
     <configuration type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
       <module name="website_pizzeria" />
       <predefined_log_file enabled="true" id="RUBY_RSPEC" />
@@ -296,6 +278,42 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method v="2" />
     </configuration>
+    <configuration name="OrdersController" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+      <module name="website_pizzeria" />
+      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/controllers/orders_controller_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="OrdersController" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="LINE_NUMBER_EXAMPLE_IDS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="website_pizzeria" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="website_pizzeria" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -371,6 +389,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="RSpec.OrdersController" />
         <item itemvalue="RSpec.Checkouts::ConfirmsController when GET show (1)" />
       </list>
     </recent_temporary>
@@ -388,7 +407,8 @@
       <workItem from="1680279157780" duration="2325000" />
       <workItem from="1680284524866" duration="2683000" />
       <workItem from="1680512873695" duration="3459000" />
-      <workItem from="1680550845960" duration="5645000" />
+      <workItem from="1680550845960" duration="5784000" />
+      <workItem from="1680607114178" duration="1137000" />
     </task>
     <task id="LOCAL-00001" summary="checkout function without tests">
       <created>1680195529627</created>
@@ -397,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680195529627</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add orders functional">
+      <created>1680557012038</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680557012038</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,7 +443,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="checkout function without tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="checkout function without tests" />
+    <MESSAGE value="add orders functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="add orders functional" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/website_pizzeria@Checkouts__CreateOrderCard.rcov" NAME="Checkouts::CreateOrderCard Coverage Results" MODIFIED="1680286634821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="website_pizzeria" />
