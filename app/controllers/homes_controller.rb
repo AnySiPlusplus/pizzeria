@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-  NEWEST_BOOKS_COUNT = 2
+  NEWEST_PIZZAS_COUNT = 2
 
   def index
     @best_sellers = Pizzas::BestSellersQuery.new(params).call

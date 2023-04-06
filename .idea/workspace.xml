@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea77ef-0669-4f5d-b7e7-bb5be8c4f1fa" name="Changes" comment="add orders functional">
-      <change afterPath="$PROJECT_DIR$/app/admin/orders.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/features/active_admin/orders_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/support/pages/active_admin/orders/index.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/support/pages/active_admin/orders/show.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/decorators/order_decorator.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/decorators/order_decorator.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/locales/active_admin.en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/active_admin.en.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/checkouts/addresses_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/checkouts/addresses_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/shipping_addresses.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/shipping_addresses.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/homes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/homes_controller.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
