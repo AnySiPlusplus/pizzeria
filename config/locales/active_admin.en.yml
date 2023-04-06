@@ -2,7 +2,7 @@ en:
   active_admin:
     resource:
       show:
-        book_title: 'Book Title'
+        pizza_name: 'Pizza Name'
         quantity: 'Quantity'
         price: 'Price'
         products: 'Products for this order'

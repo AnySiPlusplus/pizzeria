@@ -7,6 +7,7 @@ class OrderDecorator < ApplicationDecorator
   decorates_association :card
   delegate :masked_card_number, to: :card
   delegate :card_number, to: :card
+  delegate :format, to: :subtotal
 
   STATUS_COLORS = {
     'complete' => 'text-info',
@@ -22,6 +23,30 @@ class OrderDecorator < ApplicationDecorator
 
   def completed_date
     completed_at.strftime(I18n.t('checkouts.date_format'))
+  end
+
+  def method_payment
+    return :pay_cash unless card
+
+    card
+  end
+
+  def receiver
+    shipping_address&.receiver_name
+  end
+
+  def receiver_phone
+    shipping_address&.phone
+  end
+
+  def check_number_card
+    return :Dont_have_card unless card
+
+    masked_card_number
+  end
+
+  def order_user_name
+    object.user.email
   end
 
   def amount_pay
