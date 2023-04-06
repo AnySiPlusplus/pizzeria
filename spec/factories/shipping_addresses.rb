@@ -5,5 +5,6 @@ FactoryBot.define do
     street { FFaker::AddressBR.street }
     building { FFaker::AddressBR.building_number }
     city { FFaker::AddressBR.city }
+    phone { FFaker.numerify('+1352-2##-####') }
   end
 end

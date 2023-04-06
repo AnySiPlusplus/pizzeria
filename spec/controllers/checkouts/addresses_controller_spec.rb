@@ -24,7 +24,7 @@ RSpec.describe Checkouts::AddressesController, type: :controller do
     it 'must be update shipping address' do
       put :update, params: { checkouts_address: params }
 
-      expect(response.status).to eq(200)
+      expect(response.status).to eq(302)
     end
   end
 end

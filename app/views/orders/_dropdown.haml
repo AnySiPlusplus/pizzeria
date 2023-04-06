@@ -1,0 +1,8 @@
+.dropdowns.dropdown.general-order-dropdown
+  %a.dropdown-toggle.lead.small{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"}
+    = t(".#{params[:status] || 'all_orders'}")
+    %i.fa.fa-angle-down.dropdown-icon.pull-right
+  %ul.dropdown-menu
+    - Order::FINISHED_STATUSES.keys.each do |order|
+      %li
+        %a{href: orders_path(status: order)}= t(".#{order}")

@@ -1,0 +1,26 @@
+en:
+  pizzas:
+    order_dropdown:
+      name_asc: 'Title: A - Z'
+      name_desc: 'Title: Z - A'
+      newest: 'Newest first'
+      most_popular: 'Popular first'
+      price_asc: 'Price: Low to hight'
+      price_desc: 'Price: Hight to low'
+    index:
+      catalog: 'Catalog'
+      filter: 'Filter by category'
+      sort_by: 'Sort by'
+      name_asc: 'Name: A - Z'
+      name_desc: 'Name: Z - A'
+      newest: 'Newest first'
+      most_popular: 'Popular first'
+      price_asc: 'Price: Low to hight'
+      price_desc: 'Price: Hight to low'
+      view_more: "View more"
+    view_more:
+      view_more: 'View more'
+    categories_bar:
+      all: 'All'
+    category_sort_dropdown:
+      all: 'All'

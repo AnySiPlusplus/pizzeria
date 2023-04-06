@@ -1,25 +1,15 @@
 .carousel-inner{role: "listbox"}
-  .item.active
-    .row
-      .col-sm-5
-        .general-img-wrap
-          %img.img-shadow.general-thumbnail-img{src: "https://www.freeiconspng.com/uploads/pizza-png-16.png", alt: "design-book"}
-      .col-sm-7
-        .mb-60
-          %h1 Real-Life Responsive Web Design
-          %p.lead Smart front-end techniques and design patterns derived from real-life responsive projects
-          %p.lead.small Vitaly Friedman, Daniel Mall,Vitaly Friedman
-          .general-align
-            %button.disabled.btn Buy Now
-  .item
-    .row
-      .col-sm-5
-        .general-img-wrap
-          %img.img-shadow.general-thumbnail-img{src: "https://i.postimg.cc/63Gn2tYs/9.png", alt: "design-book"}
-      .col-sm-7
-        .mb-60
-          %h1 Real-Life Responsive Web Design
-          %p.lead Smart front-end techniques and design patterns derived from real-life responsive projects
-          %p.lead.small Vitaly Friedman, Daniel Mall,Vitaly Friedman
-          .general-align
-            %button.btn.btn-primary Buy Now
+  - @newest_pizzas.each_with_index do |pizza, index|
+    .item{ class: "#{'active' if index.positive?}"}
+      .row
+        .col-sm-5
+          .general-img-wrap
+            = image_tag( pizza.first_image(:large))
+        .col-sm-7
+          .mb-60
+            %h1
+              = pizza.name
+            %p.lead
+              = pizza.description.truncate(PizzaDecorator::SHORT_DESCRIPTION)
+            .general-align
+              = button_to 'Buy now' , order_items_path(order_id: current_order.id, order_item: {pizza_id: pizza.id, quantity: OrderItems::ItemsUpdate::MINIMUM_PIZZAS_QUANTIY}), class: 'btn btn-primary'

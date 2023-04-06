@@ -1,0 +1,10 @@
+- @orders.each do |order|
+  %tr
+    %td
+      = link_to t('.order', number: order.order_number), order_path(order.id), class: 'general-order-number'
+    %td
+      %span.in-grey-900.font-16.fw-300= order.completed_date
+    %td
+      %span.font-16.fw-300{ class: OrderDecorator::STATUS_COLORS[order.status]}= order.status.capitalize
+    %td
+      %strong.font-16=order.subtotal.format
