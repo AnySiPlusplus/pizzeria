@@ -3,6 +3,6 @@ class HomesController < ApplicationController
 
   def index
     @best_sellers = Pizzas::BestSellersQuery.new(params).call
-    @newest_pizzas = Pizzas::PizzasQuery.new(params).call.decorate.first(NEWEST_BOOKS_COUNT)
+    @newest_pizzas = Pizzas::PizzasQuery.new(params).call.decorate.first(NEWEST_PIZZAS_COUNT)
   end
 end
