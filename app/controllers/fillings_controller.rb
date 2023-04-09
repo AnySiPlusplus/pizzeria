@@ -8,6 +8,18 @@ class FillingsController < ApplicationController
   end
 
   def update
-    Pizzas::CreateCustomPizza.call(params: params)
+    Pizzas::UpdateCustomPizza.call(params: params)
+  end
+
+  def new
+    @additional_fillings = AdditionalFilling.all
+    @pizza_dimensions = PizzaDimension.all
+    @fillings = OrdinaryFilling.all
+  end
+
+  def create
+    Pizzas::CreateCustomPizza.call(params: params, current_order: current_order)
+
+    redirect_to cart_path
   end
 end

@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19ea77ef-0669-4f5d-b7e7-bb5be8c4f1fa" name="Changes" comment="add orders functional">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms/custom_pizzas/custom_pizza_form.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/interactors/pizzas/update_custom_pizza.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/create_custom_pizza.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/fillings/new.haml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/render-build.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/homes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/homes_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/fillings_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/fillings_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interactors/pizzas/create_custom_pizza.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/interactors/pizzas/create_custom_pizza.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/pizza.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pizza.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pizzas/index.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pizzas/index.haml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,11 +61,14 @@
   &quot;keyToString&quot;: {
     &quot;DefaultRubyCreateTestTemplate&quot;: &quot;RSpec&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/siplusplus/done_pj/website_pizzeria&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
     &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
@@ -487,6 +503,10 @@
       <workItem from="1680607114178" duration="1568000" />
       <workItem from="1680685625773" duration="4705000" />
       <workItem from="1680771355942" duration="912000" />
+      <workItem from="1680805998804" duration="6557000" />
+      <workItem from="1680855202887" duration="1820000" />
+      <workItem from="1680866655520" duration="7143000" />
+      <workItem from="1681026976793" duration="209000" />
     </task>
     <task id="LOCAL-00001" summary="checkout function without tests">
       <created>1680195529627</created>

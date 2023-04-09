@@ -17,6 +17,7 @@ ADDITIONAL_FILLINGS = %i[cheese meat paper].freeze
 DEVIVERY_COMPANIES = %i[FedEx UPS USPS Walmart Amazon].freeze
 
 categories = CATEGORY_PIZZA.map { |category| Category.create(name: category) }
+Category.create(name: :Custom)
 
 dimensions = PIZZA_DIMENSIONS.map do |dimension|
   Factory.new.create(:pizza_dimension, dimension: dimension)
