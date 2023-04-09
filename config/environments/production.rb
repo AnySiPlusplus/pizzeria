@@ -10,7 +10,7 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: ENV['HOST'] }
 
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present? || ENV['RENDER'].present?
 
   config.assets.compile = false
 

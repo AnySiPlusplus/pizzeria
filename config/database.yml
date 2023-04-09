@@ -20,6 +20,4 @@ test:
 
 production:
   <<: *default
-  database: pizzeria_production
-  username: <%= Rails.application.credentials.dig(:db, :username) %>
-  password: <%= Rails.application.credentials.dig(:db, :password) %>
+  url: <%= ENV['DATABASE_URL'] %>
