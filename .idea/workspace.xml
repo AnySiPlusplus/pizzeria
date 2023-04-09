@@ -7,8 +7,6 @@
     <list default="true" id="19ea77ef-0669-4f5d-b7e7-bb5be8c4f1fa" name="Changes" comment="add orders functional">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/render-build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/render-build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/credentials/development.yml.enc" beforeDir="false" afterPath="$PROJECT_DIR$/config/credentials/development.yml.enc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/credentials/production.yml.enc" beforeDir="false" afterPath="$PROJECT_DIR$/config/credentials/production.yml.enc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
     </list>
@@ -496,7 +494,7 @@
       <workItem from="1680805998804" duration="6557000" />
       <workItem from="1680855202887" duration="1820000" />
       <workItem from="1680866655520" duration="7143000" />
-      <workItem from="1681026976793" duration="4764000" />
+      <workItem from="1681026976793" duration="5592000" />
     </task>
     <task id="LOCAL-00001" summary="checkout function without tests">
       <created>1680195529627</created>
