@@ -8,9 +8,10 @@ default: &default
 
 development:
   <<: *default
-  database: pizzeria_development
-  user_name: <%= Rails.application.credentials.dig(:db, :username) %>
-  password: <%= Rails.application.credentials.dig(:db, :password) %>
+  database: pizzeria_production
+  user_name: <%= Rails.application.credentials.dig(:db_production, :username) %>
+  password: <%= Rails.application.credentials.dig(:db_production, :password) %>
+
 
 test:
   <<: *default
