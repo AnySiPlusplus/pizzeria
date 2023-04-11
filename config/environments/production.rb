@@ -10,13 +10,11 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: ENV['HOST'] }
 
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present? || ENV['RENDER'].present?
-
-  config.assets.compile = false
-
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.assets.quiet = true
   config.active_storage.service = :local
 
-  config.log_level = :info
+  config.log_level = :debug
 
   config.log_tags = [:request_id]
 
