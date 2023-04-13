@@ -1,51 +1,48 @@
 $( document ).ready(function() {
-    $('#create_pizza_button').click(function() {
-        new CreateCustomPizza().call();
-    });
-
+  $('.custom_pizza').click(function() {
+    new CreateCustomPizza().call();
+  });
 });
 
 
 class CreateCustomPizza {
-    constructor(data) {
-        this.createPizzaButton = $('#create_pizza_button');
-    }
+  constructor() {
+    this.totalPrice = $('#sub-total');
+  }
+  call() {
+    this.installFillingsValue();
+    this.changeTotalPrice();
+  }
 
-    call() {
-        this.request();
-    }
 
-    request() {
-        $.ajax({
-            type: 'POST',
-            url: '/fillings',
-            data: JSON.stringify({
-                authenticity_token: this.createPizzaButton.data('authenticityToken'),
-                fillings_id: this.fillings(),
-                dimension_id: $('#dimension').val(),
-            }),
-            contentType: 'application/json',
-            success: this.fleshMessage(),
-        });
-    };
+  fillings() {
+    const fillings = [];
+    $('.custom_pizza').each(function(index, item) {
+      if ($(item).is(':checked')) {
+        fillings.push($(item).data('fillingId'));
+      };
+    });
+    return fillings;
+  }
 
-    fillings() {
-      let fillings = [];
-      $('.custom_pizza').each(function(index, item) {
-          if($(item).is(':checked')){
-            fillings.push($(item).data('fillingId'))
-          };
-        });
-      return fillings
-    }
+  changeTotalPrice() {
+    const currentPrice = parseInt(this.totalPrice.data('price')) / 100;
+    const newPrice = currentPrice + this.fillingsPrice();
+    const text = this.totalPrice.data('currency') + newPrice.toFixed(2);
+    this.totalPrice.text(text);
+  }
 
-    fleshMessage() {
-        const fleshContainer = $('.container.flash_message');
-        if (fleshContainer.text() == '\n') {
-            fleshContainer.append($('<div class= \'alert alert-success text-center\'>Pizza created</div>'));
-            setTimeout(() => {
-                $('.container.flash_message').text('\n');
-            }, 2000);
-        }
-    };
+  fillingsPrice() {
+    const price = [];
+    $('.custom_pizza').each(function(index, item) {
+      if ($(item).is(':checked')) {
+        price.push(($(item).data('price')));
+      };
+    });
+    return price.reduce((a, b) => a + b, 0) / 100;
+  }
+
+  installFillingsValue() {
+    $('#filling_ids').val(this.fillings);
+  }
 }

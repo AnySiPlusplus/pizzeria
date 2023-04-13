@@ -16,7 +16,11 @@ module Pizzas
     end
 
     def fillings
-      Filling.where(id: context.params[:fillings_id])
+      Filling.where(id: permit_params[:fillings].split(','))
+    end
+
+    def pizza_dimension
+      PizzaDimension.find_by(dimension: permit_params[:pizza_dimension])
     end
 
     def create_custom_pizza
@@ -27,11 +31,15 @@ module Pizzas
       @current_form ||= CustomPizzas::CustomPizzaForm.new(CustomPizza.new(fillings: fillings))
     end
 
+    def permit_params
+      @permit_params ||= context.params.require(:custom_pizza).permit(:fillings, :pizza_dimension)
+    end
+
     def create_pizza_params
       { name: :custom_pizza,
         description: :none,
         price_cents: DEFAULT_PIZZA_PRICE,
-        pizza_dimension_id: context.params[:dimension_id],
+        pizza_dimension_id: pizza_dimension.id,
         category_id: Category.find_by(name: :Custom).id }
     end
   end

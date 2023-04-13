@@ -13,7 +13,7 @@ Delivery.destroy_all
 
 CATEGORY_PIZZA = %i[Vegan Hot Meat].freeze
 PIZZA_DIMENSIONS = [30, 60, 90, 100].freeze
-ADDITIONAL_FILLINGS = %i[cheese meat paper].freeze
+ADDITIONAL_FILLINGS = %i[cheese meat pepper].freeze
 DEVIVERY_COMPANIES = %i[FedEx UPS USPS Walmart Amazon].freeze
 
 categories = CATEGORY_PIZZA.map { |category| Category.create(name: category) }
@@ -33,7 +33,7 @@ fillings = Factory.new.create_list(:filling, 8)
 
 ADDITIONAL_FILLINGS.each { |filling| Factory.new.create(:filling, name: filling, type: :AdditionalFilling) }
 
-13.times do
+15.times do
   Factory.new.create(:ordinary_pizza, category: categories.sample, pizza_dimension: dimensions.sample,
                                       fillings: fillings.sample(rand(3..6)))
 end
