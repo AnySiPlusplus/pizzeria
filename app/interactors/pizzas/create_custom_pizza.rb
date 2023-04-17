@@ -39,7 +39,7 @@ module Pizzas
       { name: :custom_pizza,
         description: :none,
         price_cents: DEFAULT_PIZZA_PRICE,
-        pizza_dimension_id: pizza_dimension.id,
+        pizza_dimension_id: pizza_dimension&.id,
         category_id: Category.find_by(name: :Custom).id }
     end
   end
