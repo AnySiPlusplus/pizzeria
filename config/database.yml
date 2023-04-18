@@ -1,25 +1,21 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: localhost
   user_name: <%= Rails.application.credentials.dig(:db, :username) %>
   password: <%= Rails.application.credentials.dig(:db, :password) %>
-
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  port: 5432
 
 development:
   <<: *default
-  database: pizzeria_development
-  user_name: <%= Rails.application.credentials.dig(:db, :username) %>
-  password: <%= Rails.application.credentials.dig(:db, :password) %>
+  database: pizzeria_production
+
 
 test:
   <<: *default
   database: pizzeria_test
-  user_name: <%= Rails.application.credentials.dig(:db, :username) %>
-  password: <%= Rails.application.credentials.dig(:db, :password) %>
 
 production:
   <<: *default
   database: pizzeria_production
-  username: <%= Rails.application.credentials.dig(:db, :username) %>
-  password: <%= Rails.application.credentials.dig(:db, :password) %>

@@ -1,0 +1,48 @@
+.fillings-page
+  .filling-menu.dark-theme.dark-block
+    .footer-bar
+      .button
+        .back-to-cart
+          = link_to 'Back to cart', cart_path, class: 'btn btn-primary'
+    = simple_form_for CustomPizza.new, url: custom_pizza_path, method: :post do |f|
+      = f.hidden_field :fillings, value: 0, id: 'filling_ids'
+      .pizza-menu
+        .thumbnail.dark-theme.pizza-image
+          .image
+            %img{src: "https://i.postimg.cc/63Gn2tYs/9.png"}
+          .buttons-set
+            %h4 Pizza Dimension
+            = f.select(:pizza_dimension, options_for_select(@pizza_dimensions.map{|dimension| dimension.dimension }), {},{ class: 'dark-theme dark-block' })
+          .subtotal-price#total-price
+            %tr
+              %td
+                %strong.font-18 Total Price:
+              %td
+                %strong.front-18#sub-total{data: { price: 1000, currency: Money.from_cents(0, "USD").currency.symbol} }= Money.from_cents(1000, "USD").format
+        .choose-fillings.dark-theme
+          .fillings-block
+            .border-block
+              .fillings-title
+                .ordinary-title#ordinary-button.active
+                  %h1 Fillings
+                .additional-title#adding-button
+                  %h1 Additional Fillings
+              .ordinary-fillings#ordinary
+                - @fillings.each do |filling|
+                  .addition-filling
+                    .addition-checkbox
+                      %input{ type: 'checkbox', name: 'filling', class: 'custom_pizza', data: { filling_id: filling.id, price: filling.price_cents } }
+                    .filling-name
+                      %h4= filling.name
+                    .price-additional-filling
+                      %h4= filling.price.format
+              .additional-fillings#adding.hidden
+                - @additional_fillings.each do |filling|
+                  .addition-filling
+                    .addition-checkbox
+                      %input{ type: 'checkbox', name: 'filling', class: 'custom_pizza', data: { filling_id: filling.id, price: filling.price_cents } }
+                    .filling-name
+                      %h4= filling.name
+                    .price-additional-filling
+                      %h4= filling.price.format
+        = f.button :submit, 'create pizza', class: 'btn btn-primary custom-pizza-create-button'

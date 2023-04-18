@@ -4,7 +4,7 @@
       .thumbnail.general-thumbnail.dark-theme.dark-block
         = image_tag(pizza.first_image(:medium), class: 'img-shadow general-thumbnail-img')
         .thumb-hover
-          .general-thumb-link-wrap
+          .general-thumb-link-wrap.custom-grid
             %a.thumb-hover-link{href: pizza_path(pizza)}
               %i.fa.fa-eye.thumb-icon{'aria-hidden': "true"}
             = button_to  order_items_path(order_id: current_order.id, order_item: {pizza_id: pizza, quantity: 1}), class: 'thumb-hover-link book-icon-shop'  do

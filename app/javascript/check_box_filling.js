@@ -19,7 +19,7 @@ class CheckBox {
   request() {
     $.ajax({
       type: 'PATCH',
-      url: '/fillings' + '?' + 'filling_id=' + this.currentCheckBox.data('fillingId'),
+      url: '/custom_pizza' + '?' + 'filling_id=' + this.currentCheckBox.data('fillingId'),
       data: JSON.stringify({
         authenticity_token: this.currentCheckBox.data('authenticityToken'),
         order_item_id: this.currentCheckBox.data('orderItemId'),

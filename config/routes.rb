@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resource :cart, only: %i[show update]
   resource :order_items
   resource :fillings
+  resource :custom_pizza
 
   resource :address, only: %i[edit update]
   resource :user_photo, except: :show

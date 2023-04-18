@@ -42,6 +42,7 @@ module Pizzas
 
     def by_category
       @scope = @scope.where(category_id: params[:category_id])
+      @scope = Category.find(params[:category_id]).pizzas if @scope.empty?
     end
   end
 end

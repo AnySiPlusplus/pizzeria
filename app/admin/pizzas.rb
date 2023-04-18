@@ -6,7 +6,7 @@ ActiveAdmin.register Pizza do
 
   controller do
     def scoped_collection
-      action_name == ACTION_INDEX ? super.includes(%i[category pizza_dimension pizza_pictures fillings]) : super
+      action_name == ACTION_INDEX ? super.includes(%i[category pizza_pictures fillings]) : super
     end
   end
 
@@ -26,7 +26,6 @@ ActiveAdmin.register Pizza do
     column :filling_full_names
     column :category
     column :description, &:short_description
-    column :dimension, :pizza_dimension
     column :price, :format_price
 
     actions
