@@ -8,6 +8,7 @@ gem 'activeadmin_addons'
 gem 'aws-sdk-s3'
 gem 'bootsnap', require: false
 gem 'cancancan'
+gem 'coffee-script', '~> 2.4', '>= 2.4.1'
 gem 'country_select', '~> 6.0'
 gem 'cssbundling-rails'
 gem 'devise'
@@ -33,7 +34,7 @@ gem 'reform-rails'
 gem 'sassc-rails'
 gem 'shrine', '~> 3.4'
 gem 'simple_form'
-gem 'sprockets-rails'
+gem 'sprockets-rails', '2.3.3'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do

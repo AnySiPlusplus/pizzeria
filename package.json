@@ -4,6 +4,8 @@
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^3.4.1",
+    "coffee-loader": "^4.0.0",
+    "coffeescript": "^2.7.0",
     "eslint": "^8.30.0",
     "jquery": "^3.6.1",
     "node": "^19.2.0",
