@@ -1,8 +1,8 @@
 $(document).ready ($) ->
-#  setInterval (->
-#    moveRight()
-#    return
-#  ), 3000
+  setInterval (->
+    moveRight()
+    return
+  ), 3000
 
   moveLeft = ->
     $('#slider ul').animate { left: +slideWidth }, 200, ->

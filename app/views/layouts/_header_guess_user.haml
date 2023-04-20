@@ -1,8 +1,7 @@
 .header
-  %h1.header_logo Resizing Fixed Header
-  %a Home
-  %a Menu
-  %a Sign up
-  %a Log in
+  %h1.header_logo Welcome to amazing Pizzeria
+  = link_to 'Home', home_path
+  = link_to 'Menu', pizzas_path
+  = link_to 'Log in', new_user_session_path
+  = link_to 'Sign up', new_user_registration_path
 .offset
-  %p Scroll down to initiate resizing of the page header.

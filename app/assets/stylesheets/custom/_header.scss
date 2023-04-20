@@ -16,7 +16,6 @@ body {
   height: 250px;
   font-weight: bold;
   text-align: center;
-  background: gold;
   transition: .3s;
   &.small {
     height: 70px;
@@ -39,4 +38,27 @@ body {
   font-size: 50px;
   text-shadow: 3px 4px rgba(black, .1);
   transition: .3s;
+}
+
+.user-picture {
+  background-color: #1b6d85;
+  border-radius: 50%;
+  width: 20px;
+}
+
+.buttons-header {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+}
+
+.main-buttons {
+  margin-left: 250px;
+}
+
+.settings {
+  padding-top: 5px;
+  padding-left: 10px;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
 }

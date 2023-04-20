@@ -1,5 +1,5 @@
 %main.container
-  #slider
+  #slider.dark-block.dark-theme
     %a.control_next{:href => "#"} >>
     %a.control_prev{:href => "#"} <
     %ul
@@ -11,16 +11,7 @@
             = pizza.name
           .pizza-price
             = pizza.price.format
-
-
 .container
-  .get-started-block.text-center.dark-theme.dark-block
-    %h2.h1
-      = t('.welcome')
-    .mb-res-50
-      %p
-        = t('.favorite')
-    = link_to t('.started'), '#', class: 'btn btn-default'
   .mb-35
     %h3
       = t('.best_sellers')

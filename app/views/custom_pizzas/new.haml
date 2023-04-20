@@ -3,7 +3,7 @@
     .footer-bar
       .button
         .back-to-cart
-          = link_to 'Back to cart', cart_path, class: 'btn btn-primary'
+          = link_to 'Back to Menu', pizzas_path, class: 'btn btn-primary'
     = simple_form_for CustomPizza.new, url: custom_pizza_path, method: :post do |f|
       = f.hidden_field :fillings, value: 0, id: 'filling_ids'
       .pizza-menu
