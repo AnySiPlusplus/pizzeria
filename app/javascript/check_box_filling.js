@@ -2,6 +2,11 @@ $( document ).ready(function() {
   $('.complete').click(function() {
     new CheckBox($(this)).call();
   });
+
+  $('#custom_pizza_dimension_edit').click(function(){
+    // new CheckBox($(this)).call();
+    console.log($('#custom_pizza_dimension_edit').val())
+  })
 });
 
 
@@ -9,6 +14,7 @@ class CheckBox {
   constructor(data) {
     this.currentCheckBox = data;
     this.totalPrice = $('#total_price');
+    this.dimensionSelector = $('#custom_pizza_dimension_edit')
   }
 
   call() {
@@ -41,6 +47,11 @@ class CheckBox {
   substructAmount() {
     const result = parseFloat(this.totalPrice.data('price')) - this.currentCheckBox.data('price') / 100;
     this.afterOperation(result);
+  }
+
+  currentDimensionPrice() {
+    const currentDimension = this.dimensionSelector.val()
+    return this.dimensionSelector.data(currentDimension) / 100
   }
 
   afterOperation(result) {

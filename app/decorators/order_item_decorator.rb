@@ -10,7 +10,7 @@ class OrderItemDecorator < ApplicationDecorator
   end
 
   def amount_pay
-    sum = price + object.pizza.fillings.where(type: 'AdditionalFilling').sum(&:price)
+    sum = price + object.pizza.fillings.sum(&:price)
     sum += pizza.pizza_dimension.price
     sum
   end

@@ -10,7 +10,7 @@
           %img{src: "https://i.postimg.cc/63Gn2tYs/9.png"}
         .buttons-set
           %h4 Pizza Dimension
-          %select.dark-theme.dark-block
+          %select.dark-theme.dark-block#custom_pizza_dimension_edit{ data: @dimension_with_price }
             - @pizza_dimensions.each do |dimension|
               %option= dimension.dimension
         .subtotal-price

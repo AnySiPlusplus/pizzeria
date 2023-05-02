@@ -12,7 +12,7 @@
             %img{src: "https://i.postimg.cc/63Gn2tYs/9.png"}
           .buttons-set
             %h4 Pizza Dimension
-            = f.select(:pizza_dimension, options_for_select(@pizza_dimensions.map{|dimension| dimension.dimension }), {},{ class: 'dark-theme dark-block' })
+            = f.select(:pizza_dimension, options_for_select(@pizza_dimensions.map{|dimension| dimension.dimension }), {},{ class: 'dark-theme dark-block', data: @dimension_with_price })
           .subtotal-price#total-price
             %tr
               %td

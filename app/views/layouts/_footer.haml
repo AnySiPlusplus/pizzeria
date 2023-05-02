@@ -1,12 +1,15 @@
-%footer.navbar-inverse
+%footer#footer.navbar-inverse
   .container
     .row
       .col-sm-9
         %ul.list-inline.general-align.mb-25
           %li
-            %a.nav-link{href: "#"}= t('.home')
+            %a.nav-link{href: home_path}= t('.home')
           %li
-            %a.nav-link{href: "#"}= t('.menu')
+            %a.nav-link{href: pizzas_path}= t('.menu')
+          - if current_user
+            %li
+              %a.nav-link{href:  edit_user_registration_path} Settings
       .col-sm-3
         %p.general-nav-mail= t('.some_email')
         %p.general-nav-number= t('.some_number')

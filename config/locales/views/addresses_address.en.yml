@@ -17,4 +17,8 @@ en:
       phone: 'Phone'
       phone_example: 'Example +355 66 123 4567'
       button_save: 'Save'
-
+    settings_header:
+      settings: 'Settings'
+      address: 'Address'
+      privacy: 'Privacy'
+      user_photo: 'User Photo'

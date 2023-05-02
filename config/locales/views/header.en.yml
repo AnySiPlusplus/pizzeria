@@ -1,17 +1,27 @@
 en:
   layouts:
     header_guess_user:
+      welcome: 'Welcome to amazing Pizzeria'
       pizzeria: Pizzeria
       home: 'Home'
       menu: Menu
+      custom_pizza: 'Custom pizza'
+      cart: 'Cart'
+      orders: 'Orders'
+      settings: 'Settings'
       log_out: Log out
       log_in: Log In
       sign_up: 'Sign Up'
       catalog: Catalog
     header_authentificate_user:
+      welcome: 'Welcome to amazing Pizzeria'
       pizzeria: Pizzeria      
       home: 'Home'
       menu: Menu
+      custom_pizza: 'Custom pizza'
+      cart: 'Cart'
+      orders: 'Orders'
+      settings: 'Settings'
       log_out: Log out
       log_in: Log In
       catalog: Catalog

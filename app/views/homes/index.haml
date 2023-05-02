@@ -1,16 +1,17 @@
-%main.container
+%main.container.full_screen_70
   #slider.dark-block.dark-theme
     %a.control_next{:href => "#"} >>
     %a.control_prev{:href => "#"} <
-    %ul
+    %ul.base-slider
       - @newest_pizzas.each do |pizza|
         %li.pizzas-set
           .pizza-image
-            = image_tag(pizza.first_image(:small))
+            %a{ href: pizza_path(pizza.id) }
+              = image_tag(pizza.first_image(:small))
           .pizza-name
-            = pizza.name
-          .pizza-price
-            = pizza.price.format
+            %a{ href: pizza_path(pizza.id) }
+              = pizza.name
+              = pizza.price.format
 .container
   .mb-35
     %h3

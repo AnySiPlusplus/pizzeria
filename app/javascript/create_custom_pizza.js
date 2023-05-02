@@ -1,13 +1,20 @@
 $( document ).ready(function() {
+  new CreateCustomPizza().call()
+
   $('.custom_pizza').click(function() {
     new CreateCustomPizza().call();
   });
+
+  $('#custom_pizza_pizza_dimension').click(function(){
+    new CreateCustomPizza().call()
+  })
 });
 
 
 class CreateCustomPizza {
   constructor() {
     this.totalPrice = $('#sub-total');
+    this.dimensionSelector = $('#custom_pizza_pizza_dimension')
   }
   call() {
     this.installFillingsValue();
@@ -27,9 +34,14 @@ class CreateCustomPizza {
 
   changeTotalPrice() {
     const currentPrice = parseInt(this.totalPrice.data('price')) / 100;
-    const newPrice = currentPrice + this.fillingsPrice();
+    const newPrice = currentPrice + this.fillingsPrice() + this.currentDimensionPrice();
     const text = this.totalPrice.data('currency') + newPrice.toFixed(2);
     this.totalPrice.text(text);
+  }
+
+  currentDimensionPrice() {
+    const currentDimension = this.dimensionSelector.val()
+    return this.dimensionSelector.data(currentDimension) / 100
   }
 
   fillingsPrice() {

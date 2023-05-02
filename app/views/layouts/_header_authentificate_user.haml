@@ -1,22 +1,29 @@
 .header
-  %h1.header_logo Welcome to amazing Pizzeria
+  %h1.header_logo= t('.welcome')
   .buttons-header
     .main-buttons
-      = link_to 'Home', home_path
-      = link_to 'Menu', pizzas_path
-    .settings.dark-block.dark-theme
+      = link_to t('.home'), home_path
+      = link_to t('.menu'), pizzas_path
+      = link_to t('.custom_pizza'), new_custom_pizza_path
+      %a{ href: cart_path }
+        %i.fas.fa.fa-shopping-basket
+          = current_order.order_items.count
+    .settings.dark-block.dark-theme#dropdown
       %a.my_account{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"}
         - if current_user.user_picture
-          = image_tag(current_user.user_picture.image_url(:tiny))
+          = image_tag(current_user.user_picture.image_url(:tiny), class: 'small-image')
         - else
-          .user-picture
+          .user-picture.small-image
             = current_user.email[0].capitalize
-        %ul.dropdown-menu
-          %li
-            = link_to 'Settings', edit_address_path
-            = link_to 'Orders', orders_path
-          %li.divider{role: "separator"}
-            %li
-              = button_to t('.log_out'), destroy_user_session_path, method: :delete, class: 'button_log_out'
+        .settings-menu.hidden
+          .setting-btn
+            = link_to t('.cart'), cart_path
+            = current_order.order_items.count
+          .setting-btn
+            = link_to t('.orders'), orders_path
+          .setting-btn
+            = link_to t('.settings'), edit_address_path
+          .separator-dropdown-menu
+            = button_to t('.log_out'), destroy_user_session_path, method: :delete, class: 'button_log_out'
 
 .offset

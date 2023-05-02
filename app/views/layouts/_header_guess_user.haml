@@ -1,7 +1,10 @@
 .header
   %h1.header_logo Welcome to amazing Pizzeria
-  = link_to 'Home', home_path
-  = link_to 'Menu', pizzas_path
-  = link_to 'Log in', new_user_session_path
-  = link_to 'Sign up', new_user_registration_path
+  = link_to t('.home'), home_path
+  = link_to t('.menu'), pizzas_path
+  = link_to t('.log_in'), new_user_session_path
+  = link_to t('.sign_up'), new_user_registration_path
+  %a{ href: cart_path }
+    %i.fas.fa.fa-shopping-basket
+      = current_order.order_items.count
 .offset

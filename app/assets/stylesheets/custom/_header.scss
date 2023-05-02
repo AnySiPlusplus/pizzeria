@@ -5,13 +5,16 @@ body {
 
 .offset {
   margin-top: 0;
-  padding-top: 270px;
+  padding-top: 50px;
   text-align: center;
   transition: .3s;
 }
 
+img {
+  border-radius: 50%;
+}
+
 .header {
-  position: fixed;
   width: 100%;
   height: 250px;
   font-weight: bold;
@@ -41,8 +44,7 @@ body {
 }
 
 .user-picture {
-  background-color: #1b6d85;
-  border-radius: 50%;
+  margin-top: 15px;
   width: 20px;
 }
 
@@ -58,7 +60,44 @@ body {
 .settings {
   padding-top: 5px;
   padding-left: 10px;
-  width: 100px;
-  height: 30px;
+  width: 70px;
+  height: 60px;
   border-radius: 20px;
 }
+
+.small-image {
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+
+.settings-open {
+  padding-top: 5px;
+  padding-left: 10px;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+}
+
+.settings-menu {
+  border-radius: 20px;
+  display: grid;
+  width: 200px;
+  height: auto;
+}
+
+.setting-btn {
+  margin-top: 10px;
+}
+
+.separator-dropdown-menu {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #1b6d85;
+}
+
+.button_log_out {
+  border: none;
+  background: none;
+}
+
