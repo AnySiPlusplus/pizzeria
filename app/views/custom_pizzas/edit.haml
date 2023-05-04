@@ -10,15 +10,15 @@
           %img{src: "https://i.postimg.cc/63Gn2tYs/9.png"}
         .buttons-set
           %h4 Pizza Dimension
-          %select.dark-theme.dark-block#custom_pizza_dimension_edit{ data: @dimension_with_price }
+          %select.dark-theme.dark-block#custom_pizza_dimension_edit{ data: { dimensions: @dimension_with_price, order_item_id: @order_item.id, authenticity_token: form_authenticity_token } ,  }
             - @pizza_dimensions.each do |dimension|
-              %option= dimension.dimension
+              %option{ selected: current_dimension(@order_item, dimension) }= dimension.dimension
         .subtotal-price
           %tr
             %td
               %strong.font-18 Total Price:
             %td
-              %strong.font-18#total_price{ data: { price: @order_item.amount_pay, currency:  @order_item.amount_pay.currency.symbol  } }= @order_item.amount_pay.format
+              %strong.font-18#total_price{ data: { price: @order_item.price.cents, currency:  @order_item.amount_pay.currency.symbol  } }= @order_item.amount_pay.format
       .choose-fillings.dark-theme
         .fillings-block
           .border-block

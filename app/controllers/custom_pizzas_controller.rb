@@ -22,7 +22,7 @@ class CustomPizzasController < ApplicationController
 
   private
 
-  def setup_variables 
+  def setup_variables
     @additional_fillings = AdditionalFilling.all
     @pizza_dimensions = PizzaDimension.all
     @dimension_with_price = PizzaDimensions::DimensionsQuery.new(params: params).call

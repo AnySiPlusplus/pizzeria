@@ -1,20 +1,20 @@
 $( document ).ready(function() {
-  new CreateCustomPizza().call()
+  new CreateCustomPizza().call();
 
   $('.custom_pizza').click(function() {
     new CreateCustomPizza().call();
   });
 
-  $('#custom_pizza_pizza_dimension').click(function(){
-    new CreateCustomPizza().call()
-  })
+  $('#custom_pizza_pizza_dimension').click(function() {
+    new CreateCustomPizza().call();
+  });
 });
 
 
 class CreateCustomPizza {
   constructor() {
     this.totalPrice = $('#sub-total');
-    this.dimensionSelector = $('#custom_pizza_pizza_dimension')
+    this.dimensionSelector = $('#custom_pizza_pizza_dimension');
   }
   call() {
     this.installFillingsValue();
@@ -40,8 +40,8 @@ class CreateCustomPizza {
   }
 
   currentDimensionPrice() {
-    const currentDimension = this.dimensionSelector.val()
-    return this.dimensionSelector.data(currentDimension) / 100
+    const currentDimension = this.dimensionSelector.val();
+    return this.dimensionSelector.data(currentDimension) / 100;
   }
 
   fillingsPrice() {

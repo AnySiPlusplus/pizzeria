@@ -17,8 +17,8 @@ import './checkout_email_with_password';
 import './checkout_email_without_password';
 import './create_custom_pizza';
 import './header';
-import './slider.coffee'
-import './dropdown_header.coffee'
+import './slider.coffee';
+import './dropdown_header.coffee';
 
 window.jQuery = $;
 window.$ = $;

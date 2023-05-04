@@ -3,10 +3,9 @@ $( document ).ready(function() {
     new CheckBox($(this)).call();
   });
 
-  $('#custom_pizza_dimension_edit').click(function(){
-    // new CheckBox($(this)).call();
-    console.log($('#custom_pizza_dimension_edit').val())
-  })
+  $('#custom_pizza_dimension_edit').click(function() {
+    new CheckBox($(this)).call();
+  });
 });
 
 
@@ -14,7 +13,7 @@ class CheckBox {
   constructor(data) {
     this.currentCheckBox = data;
     this.totalPrice = $('#total_price');
-    this.dimensionSelector = $('#custom_pizza_dimension_edit')
+    this.dimensionSelector = $('#custom_pizza_dimension_edit');
   }
 
   call() {
@@ -25,39 +24,43 @@ class CheckBox {
   request() {
     $.ajax({
       type: 'PATCH',
-      url: '/custom_pizza' + '?' + 'filling_id=' + this.currentCheckBox.data('fillingId'),
+      url: '/custom_pizza' + '?' + 'filling_id=' + this.filling_id(),
       data: JSON.stringify({
         authenticity_token: this.currentCheckBox.data('authenticityToken'),
         order_item_id: this.currentCheckBox.data('orderItemId'),
+        pizza_dimension: this.dimensionSelector.val(),
       }),
       contentType: 'application/json',
-      success: this.checkSubtotal(),
+      success: this.changeTotalPrice(),
     });
   };
 
-  checkSubtotal() {
-    this.currentCheckBox.is(':checked') ? this.addAmount() : this.substructAmount();
+  filling_id() {
+    return this.currentCheckBox.data('fillingId') ? this.currentCheckBox.data('fillingId') : 0;
   }
 
-  addAmount() {
-    const result = parseFloat(this.totalPrice.data('price')) + this.currentCheckBox.data('price') / 100;
-    this.afterOperation(result);
-  }
-
-  substructAmount() {
-    const result = parseFloat(this.totalPrice.data('price')) - this.currentCheckBox.data('price') / 100;
-    this.afterOperation(result);
+  fillingsPrice() {
+    const price = [];
+    $('.complete').each(function(index, item) {
+      if ($(item).is(':checked')) {
+        price.push(($(item).data('price')));
+      };
+    });
+    return price.reduce((a, b) => a + b, 0) / 100;
   }
 
   currentDimensionPrice() {
-    const currentDimension = this.dimensionSelector.val()
-    return this.dimensionSelector.data(currentDimension) / 100
+    const currentDimension = this.dimensionSelector.val();
+    return this.dimensionSelector.data('dimensions-' + currentDimension) / 100;
   }
 
-  afterOperation(result) {
-    this.totalPrice.data('price', result.toFixed(2));
-    this.totalPrice.text(this.totalPrice.data('currency') + result.toFixed(2));
+  changeTotalPrice() {
+    const currentPrice = parseInt(this.totalPrice.data('price')) / 100;
+    const newPrice = currentPrice + this.fillingsPrice() + this.currentDimensionPrice();
+    const text = this.totalPrice.data('currency') + newPrice.toFixed(2);
+    this.totalPrice.text(text);
   }
+
 
   fleshMessage() {
     const fleshContainer = $('.container.flash_message');
