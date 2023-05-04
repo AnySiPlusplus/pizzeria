@@ -14,7 +14,7 @@ module Pizzas
     def good_outcome
       current_order_item.update(pizza: custom_pizza_form)
       custom_pizza_form.fillings = current_pizza.fillings
-      custom_pizza_form.fillings.delete(except_filling)
+      custom_pizza_form.fillings.delete(except_filling) unless params_filling_id_zero?
       working_with_custom_pizza(custom_pizza_form)
     end
 
@@ -24,7 +24,7 @@ module Pizzas
     end
 
     def check_include_filling(object)
-      return if context.params[:filling_id].to_i.zero?
+      return if params_filling_id_zero?
 
       object.fillings.include?(except_filling) ? delete_filling(object) : update_pizza_filling(object)
     end
@@ -65,6 +65,10 @@ module Pizzas
 
     def params
       @params ||= current_pizza.attributes.except(*EXCEPT_PARAMS)
+    end
+
+    def params_filling_id_zero?
+      context.params[:filling_id].to_i.zero?
     end
   end
 end

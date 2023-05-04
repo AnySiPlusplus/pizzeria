@@ -3,8 +3,8 @@ module Pages
     class Index < ApplicationPrism
       set_url '/'
 
-      section :header, 'header' do
-        element :logo, '.pizzeria-logo', text: I18n.t('layouts.header_guess_user.pizzeria')
+      section :header, 'body' do
+        element :logo, '.header', text: I18n.t('layouts.header_guess_user.welcome')
         element :button_home, 'a', text: I18n.t('layouts.header_guess_user.home')
         element :button_menu, 'a', text: I18n.t('layouts.header_guess_user.menu')
         element :button_sign_up, 'a', text: I18n.t('layouts.header_guess_user.sign_up')

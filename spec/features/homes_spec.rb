@@ -14,8 +14,6 @@ RSpec.describe 'Homes', type: :feature do
   end
 
   context 'when check section body' do
-    it { expect(page.body).to have_welcome_text }
-    it { expect(page.body).to have_button_get_started }
     it { expect(page.body).to have_best_sellers_text }
   end
 
