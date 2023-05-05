@@ -50,7 +50,7 @@ class OrderDecorator < ApplicationDecorator
   end
 
   def amount_pay
-    sum = order_items.includes(:pizza).sum(&:amount_pay)
+    sum = order_items.includes(pizza: %i[fillings pizza_dimension]).sum(&:amount_pay)
     sum += delivery.price if delivery
     sum
   end

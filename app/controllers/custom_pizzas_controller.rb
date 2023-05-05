@@ -1,7 +1,7 @@
 class CustomPizzasController < ApplicationController
+  before_action :setup_variables, only: %i[new edit]
+
   def new
-    @additional_fillings = AdditionalFilling.all
-    @pizza_dimensions = PizzaDimension.all
     @fillings = OrdinaryFilling.all
   end
 
@@ -13,9 +13,7 @@ class CustomPizzasController < ApplicationController
 
   def edit
     @order_item = OrderItem.find(params[:order_item_id]).decorate
-    @pizza_dimensions = PizzaDimension.all
     @fillings = fillings
-    @additional_fillings = AdditionalFilling.all
   end
 
   def update
@@ -23,6 +21,12 @@ class CustomPizzasController < ApplicationController
   end
 
   private
+
+  def setup_variables
+    @additional_fillings = AdditionalFilling.all
+    @pizza_dimensions = PizzaDimension.all
+    @dimension_with_price = PizzaDimensions::DimensionsQuery.new(params: params).call
+  end
 
   def fillings
     @order_item.pizza.type.to_sym == :CustomPizza ? OrdinaryFilling.all : similar_pizza_fillings

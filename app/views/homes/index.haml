@@ -1,25 +1,18 @@
-%main.container
-  #slider.carousel.slide.dark-theme.slider-block{'data-ride': "carousel"}
-    %ol.carousel-indicators
-      %li.active{'data-target': "#slider", 'data-slide-to': "0"}
-      %li{'data-target': "#slider", 'data-slide-to': "1"}
-    = render 'homes/newest'
-    %a.left.carousel-control{href: "#slider", role: "button", 'data-slide': "prev"}
-      %span.icon-prev{'aria-hidden': "true"}
-      %span.sr-only
-        = t('.previous')
-    %a.right.carousel-control{href: "#slider", role: "button", 'data-slide': "next"}
-      %span.icon-next{'aria-hidden': "true"}
-      %span.sr-only
-        = t('.next')
+%main.container.full_screen_70
+  #slider.dark-block.dark-theme
+    %a.control_next{:href => "#"} >>
+    %a.control_prev{:href => "#"} <
+    %ul.base-slider
+      - @newest_pizzas.each do |pizza|
+        %li.pizzas-set
+          .pizza-image
+            %a{ href: pizza_path(pizza.id) }
+              = image_tag(pizza.first_image(:small))
+          .pizza-name
+            %a{ href: pizza_path(pizza.id) }
+              = pizza.name
+              = pizza.price.format
 .container
-  .get-started-block.text-center.dark-theme.dark-block 
-    %h2.h1
-      = t('.welcome')
-    .mb-res-50
-      %p
-        = t('.favorite')
-    = link_to t('.started'), '#', class: 'btn btn-default'
   .mb-35
     %h3
       = t('.best_sellers')

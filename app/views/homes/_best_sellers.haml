@@ -1,16 +1,16 @@
 .row
   - @best_sellers.each do |pizza|
-    .col-sm-6.col-md-3
+    .col-sm-6.col-md-3.dark-theme
       .general-thumb-wrap
-        .thumbnail.general-thumbnail
+        .thumbnail.general-thumbnail.dark-theme.dark-block
           .img-shadow.general-thumbnail-img
             = image_tag( pizza.first_image(:large))
           .thumb-hover
-            .general-thumb-link-wrap
+            .general-thumb-link-wrap.custom-grid
               %a.thumb-hover-link{href: pizza_path(pizza.id)}
                 %i.fa.fa-eye.thumb-icon{'aria-hidden': "true"}
               = button_to  order_items_path(order_id: current_order.id, order_item: {pizza_id: pizza, quantity: 1}), class: 'thumb-hover-link book-icon-shop'  do
-                %i.fa.fa-shopping-cart.thumb-icon{'aria-hidden': "true"}
+                %i.fas.fa.fa-cart-plus{'aria-hidden': "true"}
       .mb-35
         .clearfix
           %p.pull-right.font-16.in-gold-500= pizza.price.format

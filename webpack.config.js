@@ -2,6 +2,14 @@ const path    = require("path")
 const webpack = require("webpack")
 
 module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.coffee$/,
+        loader: "coffee-loader",
+      },
+    ],
+  },
   mode: "production",
   resolve: {
     extensions: ['.js', '.jsx']

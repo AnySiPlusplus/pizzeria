@@ -1,14 +1,10 @@
-%header
-  .conteiner
-    .custom-header
-      .pizzeria-logo
-        %a{href: home_path}= t('.pizzeria')
-      .buttons-set-header
-        .buttons-header.pull-right
-          %a.margin-4{href: home_path }= t('.home')
-          %a.margin-4{href: pizzas_path}= t('.menu')
-          %a.margin-4{href: new_user_session_path }= t('.log_in')
-          %a.margin-4{href: new_user_registration_path }= t('.sign_up')
-      %a.shop-link.pull-right.hidden-xs{href: cart_path}
-        %span.shop-icon
-          %span.shop-quantity{ data: {order_items: current_order.order_items.count} }= current_order.order_items.count
+.header
+  %h1.header_logo Welcome to amazing Pizzeria
+  = link_to t('.home'), home_path
+  = link_to t('.menu'), pizzas_path
+  = link_to t('.log_in'), new_user_session_path
+  = link_to t('.sign_up'), new_user_registration_path
+  %a#shop-quantity{ href: cart_path, data: { order_items: current_order.order_items.count } }
+    %i.fas.fa.fa-shopping-basket
+      = current_order.order_items.count
+.offset

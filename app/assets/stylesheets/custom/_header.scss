@@ -1,31 +1,102 @@
-.custom-header {
-  margin: auto;
-  display: grid;
-  grid-template-columns: 0.5fr 1fr 0.1fr;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  -moz-box-shadow: 0 0 10px #ccc;
-  -webkit-box-shadow: 0 0 10px #ccc;
-  box-shadow: 0 0 10px #0a0a0a;
+body {
+  background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png);
 }
 
-.pizzeria-logo {
-  padding-top: 25px;
-  padding-left: 60px;
-}
-
-.buttons-set-header {
-  padding: 15px;
-  top: 20px;
+.offset {
+  margin-top: 0;
+  padding-top: 50px;
   text-align: center;
+  transition: .3s;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.header {
+  width: 100%;
+  height: 250px;
+  font-weight: bold;
+  text-align: center;
+  transition: .3s;
+  &.small {
+    height: 70px;
+    box-shadow: 0 0 5px rgba(black, .2);
+    & ~ .offset {
+      padding-top: 140px;
+    }
+    .header_logo {
+      padding-top: 20px;
+      font-size: 20px;
+      text-shadow: none;
+    }
+  }
+}
+
+.header_logo {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding-top: 80px;
+  font-size: 50px;
+  text-shadow: 3px 4px rgba(black, .1);
+  transition: .3s;
+}
+
+.user-picture {
+  margin-top: 15px;
+  width: 20px;
 }
 
 .buttons-header {
-  margin-right: 60px;
-  padding-right: 60px;
-  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
 }
 
-.margin-4 {
-  margin: 4px;
+.main-buttons {
+  margin-left: 250px;
 }
+
+.settings {
+  padding-top: 5px;
+  padding-left: 10px;
+  width: 70px;
+  height: 60px;
+  border-radius: 20px;
+}
+
+.small-image {
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+
+.settings-open {
+  padding-top: 5px;
+  padding-left: 10px;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+}
+
+.settings-menu {
+  border-radius: 20px;
+  display: grid;
+  width: 200px;
+  height: auto;
+}
+
+.setting-btn {
+  margin-top: 10px;
+}
+
+.separator-dropdown-menu {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #1b6d85;
+}
+
+.button_log_out {
+  border: none;
+  background: none;
+}
+

@@ -1,7 +1,7 @@
 $(document).ready(function() {
   const heightR = $(window).height();
 
-  if ($('.shop-quantity').data('orderItems') <= 2 ) {
+  if ($('#shop-quantity').data('orderItems') <= 2 ) {
     $('.cart-conteiner').css({'height': heightR});
   }
 

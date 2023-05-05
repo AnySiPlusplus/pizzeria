@@ -36,9 +36,13 @@
 !/app/assets/builds/.keep
 
 /node_modules
+/.idea
+/.vscode
 
 /config/credentials/test.key
 
 /config/credentials/production.key
 
 /config/credentials/development.key
+
+.env

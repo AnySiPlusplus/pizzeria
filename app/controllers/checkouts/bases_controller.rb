@@ -11,7 +11,7 @@ module Checkouts
     private
 
     def setup_variables
-      @order_items = current_order.order_items.includes([:pizza, { pizza: :pizza_pictures }]).decorate
+      @order_items = current_order.order_items.includes(pizza: %i[fillings pizza_dimension pizza_pictures]).decorate
       @order = current_order.decorate
     end
 
