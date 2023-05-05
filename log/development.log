@@ -29928,3 +29928,115 @@ Started GET "/assets/application.css" for ::1 at 2023-05-05 13:47:02 +0300
 Started GET "/assets/small.png" for ::1 at 2023-05-05 13:47:02 +0300
 Started GET "/assets/application.js" for ::1 at 2023-05-05 13:47:02 +0300
 Started GET "/assets/large.png" for ::1 at 2023-05-05 13:47:02 +0300
+Started GET "/" for ::1 at 2023-05-05 13:56:44 +0300
+Processing by HomesController#index as HTML
+  [1m[36mPizza Load (3.7ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" INNER JOIN "order_items" ON "order_items"."pizza_id" = "pizzas"."id" INNER JOIN "orders" ON "orders"."id" = "order_items"."order_id" WHERE "pizzas"."type" = $1 AND "orders"."status" IN ($2, $3, $4, $5, $6) GROUP BY "pizzas"."id" ORDER BY sum(order_items.quantity) desc[0m  [["type", "OrdinaryPizza"], ["status", 4], ["status", 5], ["status", 6], ["status", 7], ["status", 8]]
+  ↳ app/queries/pizzas/best_sellers_query.rb:12:in `call'
+  [1m[36mPizzaPicture Load (0.8ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."picturable_type" = $1 AND "pictures"."picturable_id" IN ($2, $3, $4, $5)[0m  [["picturable_type", "Pizza"], ["picturable_id", 8], ["picturable_id", 1], ["picturable_id", 12], ["picturable_id", 14]]
+  ↳ app/queries/pizzas/best_sellers_query.rb:12:in `call'
+  [1m[36mPizza Load (0.4ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."type" = $1[0m  [["type", "OrdinaryPizza"]]
+  ↳ app/controllers/homes_controller.rb:6:in `index'
+  [1m[36mPizzaPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."picturable_type" = $1 AND "pictures"."picturable_id" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)[0m  [["picturable_type", "Pizza"], ["picturable_id", 1], ["picturable_id", 2], ["picturable_id", 3], ["picturable_id", 4], ["picturable_id", 5], ["picturable_id", 6], ["picturable_id", 7], ["picturable_id", 8], ["picturable_id", 9], ["picturable_id", 10], ["picturable_id", 11], ["picturable_id", 12], ["picturable_id", 13], ["picturable_id", 14], ["picturable_id", 15]]
+  ↳ app/controllers/homes_controller.rb:6:in `index'
+  Rendering layout layouts/application.haml
+  Rendering homes/index.haml within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `find_or_create_current_order'
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 AND "orders"."status" IN ($2, $3, $4, $5) LIMIT $6[0m  [["user_id", 1], ["status", 1], ["status", 0], ["status", 2], ["status", 3], ["LIMIT", 1]]
+  ↳ app/interactors/orders/find_or_create.rb:21:in `find_order'
+  Rendered homes/_best_sellers.haml (Duration: 16.0ms | Allocations: 8495)
+  Rendered homes/index.haml within layouts/application (Duration: 20.7ms | Allocations: 11326)
+  [1m[36mOrderItem Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = $1[0m  [["order_id", 15]]
+  ↳ app/views/layouts/_header_authentificate_user.haml:8
+  [1m[36mCACHE OrderItem Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = $1[0m  [["order_id", 15]]
+  ↳ app/views/layouts/_header_authentificate_user.haml:10
+  [1m[36mUserPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."picturable_id" = $1 AND "pictures"."picturable_type" = $2 LIMIT $3[0m  [["picturable_id", 1], ["picturable_type", "User"], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header_authentificate_user.haml:13
+  [1m[36mCACHE OrderItem Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = $1[0m  [["order_id", 15]]
+  ↳ app/views/layouts/_header_authentificate_user.haml:21
+  Rendered layouts/_header_authentificate_user.haml (Duration: 8.2ms | Allocations: 3800)
+  Rendered layouts/_flesh.haml (Duration: 0.1ms | Allocations: 21)
+  Rendered layouts/_footer.haml (Duration: 0.2ms | Allocations: 103)
+  Rendered layout layouts/application.haml (Duration: 34.0ms | Allocations: 18184)
+Completed 200 OK in 89ms (Views: 31.9ms | ActiveRecord: 17.7ms | Allocations: 32846)
+
+
+Started GET "/assets/application.css" for ::1 at 2023-05-05 13:56:44 +0300
+Started GET "/assets/application.js" for ::1 at 2023-05-05 13:56:44 +0300
+Started GET "/assets/large.png" for ::1 at 2023-05-05 13:56:44 +0300
+Started GET "/assets/small.png" for ::1 at 2023-05-05 13:56:44 +0300
+Started GET "/" for ::1 at 2023-05-05 13:56:45 +0300
+Processing by HomesController#index as HTML
+  [1m[36mPizza Load (2.1ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" INNER JOIN "order_items" ON "order_items"."pizza_id" = "pizzas"."id" INNER JOIN "orders" ON "orders"."id" = "order_items"."order_id" WHERE "pizzas"."type" = $1 AND "orders"."status" IN ($2, $3, $4, $5, $6) GROUP BY "pizzas"."id" ORDER BY sum(order_items.quantity) desc[0m  [["type", "OrdinaryPizza"], ["status", 4], ["status", 5], ["status", 6], ["status", 7], ["status", 8]]
+  ↳ app/queries/pizzas/best_sellers_query.rb:12:in `call'
+  [1m[36mPizzaPicture Load (0.7ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."picturable_type" = $1 AND "pictures"."picturable_id" IN ($2, $3, $4, $5)[0m  [["picturable_type", "Pizza"], ["picturable_id", 8], ["picturable_id", 1], ["picturable_id", 12], ["picturable_id", 14]]
+  ↳ app/queries/pizzas/best_sellers_query.rb:12:in `call'
+  [1m[36mPizza Load (0.5ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."type" = $1[0m  [["type", "OrdinaryPizza"]]
+  ↳ app/controllers/homes_controller.rb:6:in `index'
+  [1m[36mPizzaPicture Load (1.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."picturable_type" = $1 AND "pictures"."picturable_id" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)[0m  [["picturable_type", "Pizza"], ["picturable_id", 1], ["picturable_id", 2], ["picturable_id", 3], ["picturable_id", 4], ["picturable_id", 5], ["picturable_id", 6], ["picturable_id", 7], ["picturable_id", 8], ["picturable_id", 9], ["picturable_id", 10], ["picturable_id", 11], ["picturable_id", 12], ["picturable_id", 13], ["picturable_id", 14], ["picturable_id", 15]]
+  ↳ app/controllers/homes_controller.rb:6:in `index'
+  Rendering layout layouts/application.haml
+  Rendering homes/index.haml within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `find_or_create_current_order'
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 AND "orders"."status" IN ($2, $3, $4, $5) LIMIT $6[0m  [["user_id", 1], ["status", 1], ["status", 0], ["status", 2], ["status", 3], ["LIMIT", 1]]
+  ↳ app/interactors/orders/find_or_create.rb:21:in `find_order'
+  Rendered homes/_best_sellers.haml (Duration: 14.4ms | Allocations: 8502)
+  Rendered homes/index.haml within layouts/application (Duration: 18.7ms | Allocations: 11331)
+  [1m[36mOrderItem Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = $1[0m  [["order_id", 15]]
+  ↳ app/views/layouts/_header_authentificate_user.haml:8
+  [1m[36mCACHE OrderItem Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = $1[0m  [["order_id", 15]]
+  ↳ app/views/layouts/_header_authentificate_user.haml:10
+  [1m[36mUserPicture Load (0.5ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."picturable_id" = $1 AND "pictures"."picturable_type" = $2 LIMIT $3[0m  [["picturable_id", 1], ["picturable_type", "User"], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header_authentificate_user.haml:13
+  [1m[36mCACHE OrderItem Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = $1[0m  [["order_id", 15]]
+  ↳ app/views/layouts/_header_authentificate_user.haml:21
+  Rendered layouts/_header_authentificate_user.haml (Duration: 8.1ms | Allocations: 3802)
+  Rendered layouts/_flesh.haml (Duration: 0.1ms | Allocations: 21)
+  Rendered layouts/_footer.haml (Duration: 0.2ms | Allocations: 103)
+  Rendered layout layouts/application.haml (Duration: 29.7ms | Allocations: 17092)
+Completed 200 OK in 55ms (Views: 27.6ms | ActiveRecord: 6.8ms | Allocations: 28698)
+
+
+Started GET "/assets/application.css" for ::1 at 2023-05-05 13:56:45 +0300
+Started GET "/assets/application.js" for ::1 at 2023-05-05 13:56:45 +0300
+Started GET "/assets/small.png" for ::1 at 2023-05-05 13:56:45 +0300
+Started GET "/assets/large.png" for ::1 at 2023-05-05 13:56:45 +0300
+Started GET "/" for ::1 at 2023-05-05 13:58:45 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  [1m[36mPizza Load (2.7ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" INNER JOIN "order_items" ON "order_items"."pizza_id" = "pizzas"."id" INNER JOIN "orders" ON "orders"."id" = "order_items"."order_id" WHERE "pizzas"."type" = $1 AND "orders"."status" IN ($2, $3, $4, $5, $6) GROUP BY "pizzas"."id" ORDER BY sum(order_items.quantity) desc[0m  [["type", "OrdinaryPizza"], ["status", 4], ["status", 5], ["status", 6], ["status", 7], ["status", 8]]
+  ↳ app/queries/pizzas/best_sellers_query.rb:12:in `call'
+  [1m[36mPizzaPicture Load (0.8ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."picturable_type" = $1 AND "pictures"."picturable_id" IN ($2, $3, $4, $5)[0m  [["picturable_type", "Pizza"], ["picturable_id", 8], ["picturable_id", 1], ["picturable_id", 12], ["picturable_id", 14]]
+  ↳ app/queries/pizzas/best_sellers_query.rb:12:in `call'
+  [1m[36mPizza Load (0.3ms)[0m  [1m[34mSELECT "pizzas".* FROM "pizzas" WHERE "pizzas"."type" = $1[0m  [["type", "OrdinaryPizza"]]
+  ↳ app/controllers/homes_controller.rb:6:in `index'
+  [1m[36mPizzaPicture Load (1.0ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."picturable_type" = $1 AND "pictures"."picturable_id" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)[0m  [["picturable_type", "Pizza"], ["picturable_id", 1], ["picturable_id", 2], ["picturable_id", 3], ["picturable_id", 4], ["picturable_id", 5], ["picturable_id", 6], ["picturable_id", 7], ["picturable_id", 8], ["picturable_id", 9], ["picturable_id", 10], ["picturable_id", 11], ["picturable_id", 12], ["picturable_id", 13], ["picturable_id", 14], ["picturable_id", 15]]
+  ↳ app/controllers/homes_controller.rb:6:in `index'
+  Rendering layout layouts/application.haml
+  Rendering homes/index.haml within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `find_or_create_current_order'
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 AND "orders"."status" IN ($2, $3, $4, $5) LIMIT $6[0m  [["user_id", 1], ["status", 1], ["status", 0], ["status", 2], ["status", 3], ["LIMIT", 1]]
+  ↳ app/interactors/orders/find_or_create.rb:21:in `find_order'
+  Rendered homes/_best_sellers.haml (Duration: 76.4ms | Allocations: 24357)
+  Rendered homes/index.haml within layouts/application (Duration: 105.2ms | Allocations: 43276)
+  [1m[36mOrderItem Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = $1[0m  [["order_id", 15]]
+  ↳ app/views/layouts/_header_authentificate_user.haml:8
+  [1m[36mCACHE OrderItem Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = $1[0m  [["order_id", 15]]
+  ↳ app/views/layouts/_header_authentificate_user.haml:10
+  [1m[36mUserPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE "pictures"."picturable_id" = $1 AND "pictures"."picturable_type" = $2 LIMIT $3[0m  [["picturable_id", 1], ["picturable_type", "User"], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header_authentificate_user.haml:13
+  [1m[36mCACHE OrderItem Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = $1[0m  [["order_id", 15]]
+  ↳ app/views/layouts/_header_authentificate_user.haml:21
+  Rendered layouts/_header_authentificate_user.haml (Duration: 36.3ms | Allocations: 21528)
+  Rendered layouts/_flesh.haml (Duration: 2.8ms | Allocations: 2138)
+  Rendered layouts/_footer.haml (Duration: 10.2ms | Allocations: 12676)
+  Rendered layout layouts/application.haml (Duration: 163.1ms | Allocations: 87208)
+Completed 200 OK in 249ms (Views: 148.1ms | ActiveRecord: 38.7ms | Allocations: 122996)
+
+
+Started GET "/assets/application.css" for ::1 at 2023-05-05 13:58:46 +0300
+Started GET "/assets/small.png" for ::1 at 2023-05-05 13:58:46 +0300
+Started GET "/assets/large.png" for ::1 at 2023-05-05 13:58:46 +0300
+Started GET "/assets/application.js" for ::1 at 2023-05-05 13:58:46 +0300
