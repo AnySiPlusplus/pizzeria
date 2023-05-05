@@ -1,6 +1,6 @@
 %main.container.general-main-wrap
   .text-center 
-    %h3.general-login-title= t('.sign_up')
+    %h3.general-login-title.text-color-white= t('.sign_up')
     = button_to '', user_github_omniauth_authorize_path, class: 'general-login-icon fa fa-github button_github'
     = button_to '',  user_facebook_omniauth_authorize_path, class: 'general-login-icon fa fa-facebook'
     = button_to '',  user_google_oauth2_omniauth_authorize_path, class: 'general-login-icon fa fa-google'

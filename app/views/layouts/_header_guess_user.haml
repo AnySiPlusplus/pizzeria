@@ -4,7 +4,7 @@
   = link_to t('.menu'), pizzas_path
   = link_to t('.log_in'), new_user_session_path
   = link_to t('.sign_up'), new_user_registration_path
-  %a{ href: cart_path }
+  %a#shop-quantity{ href: cart_path, data: { order_items: current_order.order_items.count } }
     %i.fas.fa.fa-shopping-basket
       = current_order.order_items.count
 .offset

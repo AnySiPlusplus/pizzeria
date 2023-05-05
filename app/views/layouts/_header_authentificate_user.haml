@@ -5,7 +5,7 @@
       = link_to t('.home'), home_path
       = link_to t('.menu'), pizzas_path
       = link_to t('.custom_pizza'), new_custom_pizza_path
-      %a{ href: cart_path }
+      %a#shop-quantity{ href: cart_path, data: { order_items: current_order.order_items.count } }
         %i.fas.fa.fa-shopping-basket
           = current_order.order_items.count
     .settings.dark-block.dark-theme.my_account#dropdown
