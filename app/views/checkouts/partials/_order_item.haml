@@ -1,4 +1,4 @@
-- @order_items.each do |order_item|
+- @order_items.includes(pizza: [:fillings, :pizza_dimension]).each do |order_item|
   %tr
     %td
       .general-img-wrap-table

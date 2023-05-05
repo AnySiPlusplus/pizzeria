@@ -5,8 +5,8 @@ module Checkouts
     def show
       session.delete(:order_id)
       super
-      @shipping_address = @current_order.shipping_address
-      @card = @current_order.card&.decorate
+      @shipping_address = current_order.shipping_address
+      @card = current_order.card&.decorate
     end
 
     private
