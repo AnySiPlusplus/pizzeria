@@ -7,7 +7,7 @@ orbs:
 jobs:
   rspec:
     docker:
-      - image: cimg/ruby:3.0.3-node
+      - image: cimg/ruby:3.2.2-node
       - image: cimg/postgres:14.0
         environment:
           POSTGRES_USER: pizzeria
