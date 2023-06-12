@@ -38,7 +38,7 @@ jobs:
           path: coverage
   linters:
     docker:
-      - image: cimg/ruby:3.0.3-node
+      - image: cimg/ruby:3.2.2-node
     steps:
       - checkout
       - ruby/install-deps
@@ -50,7 +50,7 @@ jobs:
           command: bundle exec fasterer
   security:
     docker:
-      - image: cimg/ruby:3.0.3-node
+      - image: cimg/ruby:3.2.2-node
     steps:
       - checkout
       - ruby/install-deps
