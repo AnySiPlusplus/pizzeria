@@ -31,7 +31,7 @@ RSpec.describe Checkouts::PaymentsController, type: :controller do
     let(:params) { { pay_cash: { cash: 1 } } }
 
     it 'must use payment without card' do
-      put :update, params: params
+      put(:update, params:)
 
       expect(response.status).to eq(302)
     end

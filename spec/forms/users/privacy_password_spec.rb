@@ -9,9 +9,9 @@ RSpec.describe Users::PrivacyPassword do
 
   let(:params) do
     {
-      password: password,
-      password_confirmation: password_confirmation,
-      current_password: current_password
+      password:,
+      password_confirmation:,
+      current_password:
     }
   end
 

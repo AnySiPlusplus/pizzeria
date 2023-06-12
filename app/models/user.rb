@@ -17,10 +17,10 @@ class User < ApplicationRecord
 
   def self.from_omniauth(access_token)
     email = access_token.info['email'].downcase
-    user = User.find_by(email: email)
+    user = User.find_by(email:)
 
     user ||= User.new(
-      email: email,
+      email:,
       password: Devise.friendly_token[0, 20]
     )
     user.skip_confirmation!

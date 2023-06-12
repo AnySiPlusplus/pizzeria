@@ -1,5 +1,5 @@
 RSpec.describe FastAuthentificates::FastCreateUser do
-  subject(:context) { described_class.call(params: params) }
+  subject(:context) { described_class.call(params:) }
 
   describe 'method call' do
     context 'when params valid' do

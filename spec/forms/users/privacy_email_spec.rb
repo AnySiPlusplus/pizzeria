@@ -5,7 +5,7 @@ RSpec.describe Users::PrivacyEmail do
 
   let(:params) do
     {
-      email: email
+      email:
     }
   end
   let(:email) { FFaker::Internet.email }

@@ -17,6 +17,6 @@ class AddressesController < ApplicationController
   end
 
   def result
-    @result ||= Addresses::AddressUpdate.call(params: params, current_user: current_user)
+    @result ||= Addresses::AddressUpdate.call(params:, current_user:)
   end
 end

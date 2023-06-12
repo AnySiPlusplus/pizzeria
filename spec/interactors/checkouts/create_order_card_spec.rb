@@ -1,5 +1,5 @@
 RSpec.describe Checkouts::CreateOrderCard do
-  subject(:context) { described_class.call(current_order: order, params: params) }
+  subject(:context) { described_class.call(current_order: order, params:) }
 
   let!(:order) { create(:order) }
 

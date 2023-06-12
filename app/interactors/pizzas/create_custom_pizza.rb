@@ -28,7 +28,7 @@ module Pizzas
     end
 
     def current_form
-      @current_form ||= CustomPizzas::CustomPizzaForm.new(CustomPizza.new(fillings: fillings))
+      @current_form ||= CustomPizzas::CustomPizzaForm.new(CustomPizza.new(fillings:))
     end
 
     def permit_params

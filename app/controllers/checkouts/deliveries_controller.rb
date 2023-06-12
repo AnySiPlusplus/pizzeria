@@ -8,7 +8,7 @@ module Checkouts
     end
 
     def update
-      result = Checkouts::UpdateOrderDelivery.call(params: params, current_order: current_order)
+      result = Checkouts::UpdateOrderDelivery.call(params:, current_order:)
       result.success? ? success_outcome : bad_outcome
     end
 

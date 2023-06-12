@@ -12,7 +12,7 @@ module Users
     end
 
     def update_resource(resource, params)
-      result = Privacy::PrivacyUpdate.call(params: params, resource: resource)
+      result = Privacy::PrivacyUpdate.call(params:, resource:)
       self.resource = result.form unless result.success?
       result.success?
     end

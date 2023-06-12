@@ -5,9 +5,9 @@ RSpec.describe Users::SignUpForm do
 
   let(:params) do
     {
-      email: email,
-      password: password,
-      password_confirmation: password_confirmation
+      email:,
+      password:,
+      password_confirmation:
     }
   end
   let(:email) {  FFaker::Internet.email }

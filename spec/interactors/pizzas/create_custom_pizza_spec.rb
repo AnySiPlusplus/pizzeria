@@ -1,5 +1,5 @@
 RSpec.describe Pizzas::CreateCustomPizza do
-  subject(:context) { described_class.call(current_order: order, params: params) }
+  subject(:context) { described_class.call(current_order: order, params:) }
 
   let!(:order) { create(:order) }
 
@@ -9,7 +9,7 @@ RSpec.describe Pizzas::CreateCustomPizza do
       let(:pizza_dimension) { create(:pizza_dimension) }
       let(:category) { create(:category, name: :Custom) }
       let(:params) do
-        ActionController::Parameters.new(custom_pizza: { fillings: fillings,
+        ActionController::Parameters.new(custom_pizza: { fillings:,
                                                          pizza_dimension: pizza_dimension.dimension })
       end
 

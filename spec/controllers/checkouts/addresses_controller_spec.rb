@@ -1,7 +1,7 @@
 RSpec.describe Checkouts::AddressesController, type: :controller do
   let(:user) { create(:user) }
   let(:delivery) { create(:delivery) }
-  let!(:order) { create(:order, user_id: user.id, status: :address, delivery: delivery) }
+  let!(:order) { create(:order, user_id: user.id, status: :address, delivery:) }
   let(:order_items) { create(:order_item, order_id: order.id) }
 
   before do

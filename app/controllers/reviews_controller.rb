@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
   }.freeze
 
   def create
-    result = Reviews::ReviewsCreate.call(params: params, current_user: current_user)
+    result = Reviews::ReviewsCreate.call(params:, current_user:)
     result_message(result)
     redirect_to pizza_path(params[:pizza_id])
   end

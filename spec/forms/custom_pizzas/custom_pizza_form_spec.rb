@@ -1,13 +1,13 @@
 RSpec.describe CustomPizzas::CustomPizzaForm do
-  subject(:form) { described_class.new(CustomPizza.new(fillings: fillings)) }
+  subject(:form) { described_class.new(CustomPizza.new(fillings:)) }
 
   let(:fillings) { create_list(:filling, 3) }
   let(:category) { create(:category) }
   let(:params) do
     {
-      name: name,
-      description: description,
-      price_cents: price_cents,
+      name:,
+      description:,
+      price_cents:,
       category_id: category.id
     }
   end

@@ -6,7 +6,7 @@ class CustomPizzasController < ApplicationController
   end
 
   def create
-    Pizzas::CreateCustomPizza.call(params: params, current_order: current_order)
+    Pizzas::CreateCustomPizza.call(params:, current_order:)
 
     redirect_to cart_path
   end
@@ -17,7 +17,7 @@ class CustomPizzasController < ApplicationController
   end
 
   def update
-    Pizzas::UpdateCustomPizza.call(params: params)
+    Pizzas::UpdateCustomPizza.call(params:)
   end
 
   private
@@ -25,7 +25,7 @@ class CustomPizzasController < ApplicationController
   def setup_variables
     @additional_fillings = AdditionalFilling.all
     @pizza_dimensions = PizzaDimension.all
-    @dimension_with_price = PizzaDimensions::DimensionsQuery.new(params: params).call
+    @dimension_with_price = PizzaDimensions::DimensionsQuery.new(params:).call
   end
 
   def fillings

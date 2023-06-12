@@ -5,7 +5,7 @@ class OrderItemsController < ApplicationController
   }.freeze
 
   def create
-    result = OrderItems::ItemsCreate.call(params: params, current_order: current_order)
+    result = OrderItems::ItemsCreate.call(params:, current_order:)
     result_message(result)
     redirect_to pizzas_path
   end
@@ -15,6 +15,6 @@ class OrderItemsController < ApplicationController
   end
 
   def update
-    OrderItems::ItemsUpdate.call(params: params, current_order: current_order)
+    OrderItems::ItemsUpdate.call(params:, current_order:)
   end
 end

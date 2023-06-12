@@ -6,7 +6,7 @@ class FastAuthentificatesController < ApplicationController
   def show; end
 
   def create
-    result = FastAuthentificates::FastCreateUser.call(params: params)
+    result = FastAuthentificates::FastCreateUser.call(params:)
     result.success? ? sign_in_user(result) : bad_outcome(result)
   end
 

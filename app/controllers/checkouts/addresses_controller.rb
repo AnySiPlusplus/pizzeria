@@ -22,7 +22,7 @@ module Checkouts
     end
 
     def result
-      @result ||= Checkouts::CreateShippingAddress.call(params: params, current_order: current_order)
+      @result ||= Checkouts::CreateShippingAddress.call(params:, current_order:)
     end
 
     def check_delivery_method

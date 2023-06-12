@@ -10,7 +10,7 @@ module Checkouts
     end
 
     def update
-      asnwer = Checkouts::PayCash.call(params: params, current_order: current_order)
+      asnwer = Checkouts::PayCash.call(params:, current_order:)
       asnwer.success? ? success_outcome : render(:show)
     end
 
@@ -26,7 +26,7 @@ module Checkouts
     end
 
     def result
-      @result ||= Checkouts::CreateOrderCard.call(params: params, current_order: current_order)
+      @result ||= Checkouts::CreateOrderCard.call(params:, current_order:)
     end
   end
 end

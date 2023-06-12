@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   end
 
   def find_or_create_current_order
-    result = Orders::FindOrCreate.call(id: session[:order_id], current_user: current_user)
+    result = Orders::FindOrCreate.call(id: session[:order_id], current_user:)
     session[:order_id] = result.id if result.id
     result.order
   end

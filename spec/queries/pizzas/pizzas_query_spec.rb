@@ -36,7 +36,7 @@ RSpec.describe Pizzas::PizzasQuery do
 
   context 'when user sort pizzas to category' do
     let(:category) { create(:category) }
-    let(:pizza) { create(:ordinary_pizza, category: category) }
+    let(:pizza) { create(:ordinary_pizza, category:) }
     let(:params) { { category_id: category.id } }
 
     it { expect(result).to eq([pizza]) }

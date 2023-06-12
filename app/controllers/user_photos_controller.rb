@@ -4,13 +4,13 @@ class UserPhotosController < ApplicationController
   end
 
   def update
-    UserPhotos::Update.call(params: params, current_user: current_user)
+    UserPhotos::Update.call(params:, current_user:)
 
     redirect_to edit_user_photo_path
   end
 
   def destroy
-    UserPhotos::Destroy.call(current_user: current_user)
+    UserPhotos::Destroy.call(current_user:)
 
     redirect_to edit_user_photo_path
   end

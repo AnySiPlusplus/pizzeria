@@ -17,7 +17,7 @@ RSpec.describe UserPhotosController, type: :controller do
   context 'when update photo' do
     it '#update' do
       expect do
-        put :update, params: { picture: { image: image } }
+        put :update, params: { picture: { image: } }
       end.to change(Picture, :count).from(0).to(1)
     end
   end

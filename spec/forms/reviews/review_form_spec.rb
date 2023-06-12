@@ -1,12 +1,12 @@
 RSpec.describe Reviews::ReviewForm do
-  subject(:form) { described_class.new(Review.new(user: user)) }
+  subject(:form) { described_class.new(Review.new(user:)) }
 
   let(:user) { create(:user) }
   let(:params) do
     {
-      rating: rating,
-      title: title,
-      review_text: review_text,
+      rating:,
+      title:,
+      review_text:,
       user_id: user.id,
       pizza_id: pizza.id
     }
